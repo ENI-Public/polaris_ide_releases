@@ -92,10 +92,20 @@ atteindre en cours de rédaction. Votre choix est retenu d'une session à l'autr
 
 ### La barre d'outils
 
-Sous le bandeau, la rangée de boutons met en forme le texte : gras, italique, code, titres,
-listes, blocs de code, liens, images, tableaux, encadrés. **Survolez un bouton** : l'infobulle
-dit ce qu'il fait *et* la syntaxe exacte qu'il produit. La barre est donc aussi un
-aide-mémoire.
+Sous le bandeau, les boutons sont rangés par groupes, chacun surmonté de son titre —
+comme un ruban Word :
+
+| Groupe | Ce qu'on y trouve |
+|---|---|
+| **Texte** | gras, italique, code |
+| **Titres** | module, slide, sous-section |
+| **Listes** | à puces, numérotée |
+| **Insérer** | bloc de code, texte littéral, lien, image, tableau |
+| **Encadrés** | note, astuce, important, avertissement |
+| **Copilot** | demander une proposition |
+
+**Survolez un bouton** : l'infobulle dit ce qu'il fait *et* la syntaxe exacte qu'il produit.
+La barre est donc aussi un aide-mémoire.
 
 ### Les templates ENI
 
