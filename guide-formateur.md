@@ -59,10 +59,15 @@ Un cours en AsciiDoc contient des signes qui servent à la mise en forme : `===`
 titre, `*mot*` pour du gras, `[.tp-slide]` avant un TP. Rien de compliqué, mais quand on
 n'y est pas habitué, ça encombre la lecture.
 
-**Réglages → Confort de lecture… → Affichage confortable.**
+Au centre de la barre d'outils, un bouton **Vue** propose deux affichages :
 
-Une fois cochée, cette case **masque ces signes et met votre texte en forme directement dans
-l'éditeur** : les titres s'affichent en grand, le gras en gras, les puces en puces, et les
+| | |
+|---|---|
+| **AsciiDoc** | le cours tel qu'il est écrit, avec les signes de mise en forme |
+| **Texte** | les signes masqués, le texte mis en forme |
+
+En choisissant **Texte**, Polaris **masque ces signes et met votre texte en forme directement
+dans l'éditeur** : les titres s'affichent en grand, le gras en gras, les puces en puces, et les
 lignes techniques deviennent de petites étiquettes qui disent ce qu'elles font — « Slide de
 travaux pratiques », « Code bash », « Support formateur — non projeté ». La police devient
 celle d'un document, plus celle d'un fichier de code.
@@ -77,8 +82,13 @@ Trois choses à savoir :
 - **Les blocs de code et les sorties d'écran ne changent pas.** Leur alignement en colonnes
   fait partie de leur sens.
 
-Si un `**` ou un `*` reste affiché alors que le mode est actif, ce n'est pas un bug : c'est
-que le balisage est mal fermé à cet endroit, et le support publié l'affichera pareil.
+Si un `**` ou un `*` reste affiché alors que la vue **Texte** est active, ce n'est pas un
+bug : c'est que le balisage est mal fermé à cet endroit, et le support publié l'affichera
+pareil.
+
+Le même choix existe dans **Réglages → Confort de lecture…**, sous le nom « Affichage
+confortable » : c'est le même réglage, celui de la barre d'outils étant plus rapide à
+atteindre en cours de rédaction. Votre choix est retenu d'une session à l'autre.
 
 ### La barre d'outils
 
@@ -234,8 +244,8 @@ et ce que verront les apprenants ne bougent pas.
   d'un clic.
 - **Taille de l'interface** : le bandeau, le plan du cours, la barre du bas et les fenêtres
   suivent. Grossir son texte sans pouvoir lire le nom de son fichier n'avait pas de sens.
-- **Affichage confortable** : masque le code AsciiDoc et met votre texte en forme dans
-  l'éditeur. Décrit en détail au chapitre 2.
+- **Affichage confortable** : le même réglage que le bouton **Vue** de la barre d'outils.
+  Décrit en détail au chapitre 2.
 - **Correcteur orthographique** : à décocher si vous préférez écrire sans.
 - **Mots que vous avez ajoutés** : replié par défaut, avec le nombre. Dépliez-le pour retirer
   un mot que vous auriez admis par erreur.
