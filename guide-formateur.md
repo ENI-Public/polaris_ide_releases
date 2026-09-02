@@ -53,6 +53,33 @@ chose dans les deux cas — il ne révèle pas l'existence d'un dépôt privé �
 Un cours ENI, c'est **un seul fichier** `.adoc`. Tout le cours est dedans : modules, slides,
 travaux pratiques, démonstrations, notes orateur.
 
+### Si le code AsciiDoc vous gêne : l'affichage confortable
+
+Un cours en AsciiDoc contient des signes qui servent à la mise en forme : `===` devant un
+titre, `*mot*` pour du gras, `[.tp-slide]` avant un TP. Rien de compliqué, mais quand on
+n'y est pas habitué, ça encombre la lecture.
+
+**Réglages → Confort de lecture… → Affichage confortable.**
+
+Une fois cochée, cette case **masque ces signes et met votre texte en forme directement dans
+l'éditeur** : les titres s'affichent en grand, le gras en gras, les puces en puces, et les
+lignes techniques deviennent de petites étiquettes qui disent ce qu'elles font — « Slide de
+travaux pratiques », « Code bash », « Support formateur — non projeté ». La police devient
+celle d'un document, plus celle d'un fichier de code.
+
+Trois choses à savoir :
+
+- **Votre fichier n'est pas modifié.** C'est seulement un affichage. Vous pouvez cocher et
+  décocher autant que vous voulez, le cours reste identique.
+- **La ligne où se trouve votre curseur remontre son code.** C'est voulu : c'est comme ça
+  qu'on corrige un signe précis — et c'est aussi la façon la plus simple de découvrir la
+  syntaxe, en se posant sur une ligne pour voir ce qu'il y a dessous.
+- **Les blocs de code et les sorties d'écran ne changent pas.** Leur alignement en colonnes
+  fait partie de leur sens.
+
+Si un `**` ou un `*` reste affiché alors que le mode est actif, ce n'est pas un bug : c'est
+que le balisage est mal fermé à cet endroit, et le support publié l'affichera pareil.
+
 ### La barre d'outils
 
 Sous le bandeau, la rangée de boutons met en forme le texte : gras, italique, code, titres,
@@ -179,8 +206,14 @@ Polaris le dit clairement. Le bouton **↑ Envoyer** apparaît en bas pour rées
 
 ### Demander la relecture
 
-Après une publication réussie, un bouton **Demander la relecture** apparaît. Il ouvre dans
-votre navigateur la page où proposer votre travail à quelqu'un. C'est la dernière étape.
+Après une publication réussie, un bouton **Demander la relecture** apparaît. Polaris ouvre
+alors dans votre navigateur la page où proposer votre travail, et vous le confirme en bas de
+la fenêtre.
+
+⚠️ **Il reste un clic à faire, dans le navigateur.** La page qui s'ouvre est un formulaire
+déjà rempli : votre demande n'existe qu'après avoir cliqué sur le bouton vert
+**« Create pull request »**. Tant que vous ne l'avez pas fait, votre travail est bien envoyé
+sur GitHub, mais personne n'a été sollicité pour le relire.
 
 ### Récupérer les modifications des autres
 
@@ -201,6 +234,8 @@ et ce que verront les apprenants ne bougent pas.
   d'un clic.
 - **Taille de l'interface** : le bandeau, le plan du cours, la barre du bas et les fenêtres
   suivent. Grossir son texte sans pouvoir lire le nom de son fichier n'avait pas de sens.
+- **Affichage confortable** : masque le code AsciiDoc et met votre texte en forme dans
+  l'éditeur. Décrit en détail au chapitre 2.
 - **Correcteur orthographique** : à décocher si vous préférez écrire sans.
 - **Mots que vous avez ajoutés** : replié par défaut, avec le nombre. Dépliez-le pour retirer
   un mot que vous auriez admis par erreur.
