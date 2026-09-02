@@ -1,89 +1,107 @@
 # Polaris IDE
 
-Éditeur AsciiDoc pour les cours ENI. Il permet d'écrire un cours, d'en voir le rendu
-en direct au formalisme ENI, et de le publier sur GitHub sans quitter l'application.
+**L'éditeur de cours de l'ENI.** Vous écrivez votre cours, Polaris vous montre les slides
+telles que les verront vos apprenants, vérifie le formalisme ENI au fil de la frappe, et
+publie votre travail sur GitHub sans que vous ayez à connaître Git.
 
-> **Ce dépôt ne contient pas de code source.** Il héberge uniquement les fichiers
-> d'installation et le manifeste utilisé par la mise à jour automatique. Le code de
-> l'application vit dans un dépôt interne ENI.
+Ce dépôt ne contient **que les installateurs**. Il n'y a pas de code source ici.
 
-## Télécharger
+➡️ **[Télécharger la dernière version](../../releases/latest)**
 
-**→ [Dernière version](../../releases/latest)**
+---
 
-| Système | Fichier à prendre |
-|---------|-------------------|
-| Windows | `Polaris.IDE_x.y.z_x64-setup.exe` |
-| macOS (Apple Silicon) | `Polaris.IDE_x.y.z_aarch64.dmg` |
-| Linux | `Polaris.IDE_x.y.z_amd64.AppImage` |
+## Installer
 
-Les fichiers `.sig` à côté ne s'installent pas : ce sont les signatures que
-l'application vérifie avant d'appliquer une mise à jour.
+Prenez le fichier qui correspond à votre poste dans la section **Assets** de la
+[dernière version](../../releases/latest).
 
-⚠️ Dans la liste des versions, ne prenez que celle marquée **Latest**. Une version
-marquée **Pre-release** est en cours de validation et n'est pas destinée à être
-installée.
+### Windows
 
-## Windows
+| Fichier | Quand le choisir |
+|---|---|
+| `Polaris IDE_x.y.z_x64-setup.exe` | **le cas normal** — c'est celui à prendre |
+| `Polaris IDE_x.y.z_x64_en-US.msi` | si votre service informatique déploie par MSI |
 
-Prenez le **`-setup.exe`**, pas le `.msi` : c'est le format utilisé par les mises à
-jour automatiques, et mélanger les deux crée deux installations distinctes.
+L'installation se fait **pour votre compte utilisateur seulement** : ni droits
+administrateur, ni mot de passe à demander. Les mises à jour ultérieures non plus.
 
-**Windows affichera un avertissement** au lancement : « Windows a protégé votre
-ordinateur — Éditeur : Inconnu ». C'est attendu. Il ne s'agit pas d'une détection de
-virus mais d'un contrôle de réputation : l'application n'est pas accompagnée d'un
-certificat d'éditeur commercial. Pour continuer :
+> **Windows va afficher « Éditeur inconnu ».** C'est normal : Polaris n'est pas encore signé
+> par un certificat de l'école. Cliquez sur **Informations complémentaires** puis
+> **Exécuter quand même**. Cet avertissement disparaîtra le jour où l'ENI fournira un
+> certificat.
 
-1. cliquez sur **Informations complémentaires** ;
-2. puis sur **Exécuter quand même**.
+### macOS
 
-Cet avertissement n'apparaît **qu'à la première installation**. Les mises à jour
-suivantes se font sans aucune alerte.
+Prenez le fichier `.dmg`. **Puces Apple Silicon uniquement** (M1 et suivantes) — les Mac Intel
+ne sont pas pris en charge.
 
-L'installation se fait dans votre profil utilisateur : elle ne demande pas de droits
-administrateur.
+> **macOS refusera d'ouvrir l'application la première fois**, avec un message du genre
+> « Polaris IDE ne peut pas être ouvert car son développeur n'a pas pu être vérifié ».
+> Allez dans **Réglages Système → Confidentialité et sécurité**, descendez jusqu'au message
+> concernant Polaris IDE, et cliquez sur **Ouvrir quand même**. Une seule fois.
+>
+> Si à la place vous lisez « **Polaris IDE est endommagé et ne peut pas être ouvert** »,
+> ouvrez le Terminal et lancez :
+>
+> ```
+> xattr -cr "/Applications/Polaris IDE.app"
+> ```
 
-## macOS
+### Linux
 
-Uniquement pour les Mac **Apple Silicon** (M1 et suivants). Les Mac Intel ne sont pas
-pris en charge.
+Prenez l'**AppImage** : elle fonctionne sur toutes les distributions, sans installation.
+Rendez-la exécutable, puis lancez-la :
 
-L'application n'étant pas notariée auprès d'Apple, macOS refusera de l'ouvrir au
-premier lancement. Faites un **clic droit sur l'application → Ouvrir**, puis
-confirmez : le système mémorise ensuite votre choix.
-
-## Linux
-
-L'**AppImage** est le format recommandé : c'est le seul qui reçoive les mises à jour
-automatiques. Rendez-le exécutable avant de le lancer :
-
-```bash
-chmod +x Polaris.IDE_*.AppImage
-./Polaris.IDE_*.AppImage
+```
+chmod +x Polaris_IDE_x.y.z_amd64.AppImage
+./Polaris_IDE_x.y.z_amd64.AppImage
 ```
 
-Les paquets `.deb` et `.rpm` sont également fournis, mais ils devront être mis à jour
-manuellement.
+> ⚠️ **Si vous installez par `.deb` ou `.rpm`, la mise à jour automatique ne fonctionnera
+> pas.** Polaris vous le dira, et vous proposera d'ouvrir la page des versions pour prendre
+> la nouvelle à la main. L'AppImage, elle, se met à jour toute seule.
 
-## Mises à jour
+---
 
-Polaris IDE vérifie s'il existe une nouvelle version au démarrage, puis une fois par
-jour. Quand une version est disponible, un bandeau discret apparaît en bas de la
-fenêtre.
+## Ce qu'il faut sur le poste
 
-Trois choses à savoir :
+- **Une connexion internet.** L'aperçu du cours charge la charte graphique ENI en ligne. Sans
+  réseau, Polaris fonctionne et vous pouvez écrire, mais l'aperçu s'affiche sans les couleurs
+  et la mise en page ENI.
+- **Git pour Windows**, si vous publiez votre travail. Polaris n'a pas besoin de Git pour
+  fonctionner — il embarque tout ce qu'il faut — mais il réutilise le gestionnaire
+  d'identifiants installé avec Git pour se connecter à GitHub. C'est le même que celui qui
+  vous authentifie déjà en ligne de commande.
+- **Windows 11** de préférence. Polaris a besoin de WebView2, présent d'origine sur Windows 11.
 
-- **rien ne s'installe sans votre accord** — vous choisissez le moment, et vous
-  pouvez reporter ;
-- une version reportée **n'est plus reproposée** ; seule la suivante le sera ;
-- l'installation est **refusée tant qu'un fichier n'est pas enregistré**, car
-  l'application redémarre à la fin.
+Polaris ne stocke **aucun mot de passe** et n'a **aucun serveur** : tout se passe entre votre
+poste, GitHub, et le dépôt de votre cours.
 
-Si votre poste n'a pas accès à Internet, Polaris fonctionne normalement : la
-vérification échoue en silence.
+---
 
-## Signaler un problème
+## Les mises à jour
 
-Passez par les canaux internes ENI. Précisez le **numéro de version**, affiché en
-permanence en bas à droite de la fenêtre — c'est l'information la plus utile pour
-comprendre ce qui se passe sur votre poste.
+Polaris vérifie s'il existe une nouvelle version quelques secondes après son démarrage, puis
+une fois par jour. Quand il en trouve une, un bandeau discret apparaît en bas de la fenêtre
+avec la liste des nouveautés.
+
+**Rien ne s'installe sans votre accord.** Trois règles :
+
+- vous cliquez sur **Installer et redémarrer** quand *vous* le décidez — jamais en pleine
+  séance ;
+- si vous cliquez sur **Plus tard**, la version n'est plus reproposée. Vous la retrouvez
+  quand vous voulez dans **Réglages** (un point orange apparaît sur la roue crantée) ;
+- l'installation est refusée tant que votre fichier n'est pas enregistré, puisque Polaris
+  redémarre.
+
+Pour savoir ce qu'apporte la version que vous avez déjà : survolez le **numéro de version**
+en bas à droite de la fenêtre.
+
+---
+
+## Un problème ?
+
+- **Le guide d'utilisation** répond à la plupart des questions :
+  [guide-formateur.md](guide-formateur.md).
+- Sinon, signalez-le à l'équipe qui vous a transmis Polaris, avec **le numéro de version**
+  (en bas à droite de la fenêtre) et ce que vous faisiez.
