@@ -16,7 +16,7 @@ les deux premières sections suffisent pour travailler.
 4. [Ce que Polaris vérifie pour vous](#4-ce-que-polaris-vérifie-pour-vous)
 5. [Publier son travail](#5-publier-son-travail)
 6. [Régler son confort de lecture](#6-régler-son-confort-de-lecture)
-7. [L'autocomplétion Copilot](#7-lautocomplétion-copilot)
+7. [Se faire aider par Copilot](#7-se-faire-aider-par-copilot)
 8. [Quand ça coince](#8-quand-ça-coince)
 9. [Ce que Polaris ne sait pas encore faire](#9-ce-que-polaris-ne-sait-pas-encore-faire)
 
@@ -42,9 +42,19 @@ L'emplacement que vous avez choisi est retenu. Au cours suivant, il est déjà l
 > **Vous avez déjà le cours sur votre poste ?** Utilisez **📂 Ouvrir un cours…** à la place, et
 > désignez le dossier.
 
-**Si le téléchargement échoue**, le message parle de deux causes possibles : le lien est faux,
-ou le cours est privé et votre poste n'a pas d'identifiants GitHub. GitHub répond la même
-chose dans les deux cas — il ne révèle pas l'existence d'un dépôt privé — d'où l'ambiguïté.
+> **N'importe quel lien de la page du cours fait l'affaire.** Si vous copiez la barre
+> d'adresse de votre navigateur en regardant un fichier ou une branche — une adresse du genre
+> `.../mon-cours/blob/main/cours.adoc` — Polaris la ramène tout seul au cours lui-même.
+
+**Si le téléchargement échoue**, le message vous dit laquelle des deux situations vous
+concerne :
+
+- **votre poste n'a pas d'identifiants GitHub enregistrés** — un `git push` en ligne de
+  commande, une fois, suffit à les enregistrer ; demandez à votre référent ;
+- **le cours reste introuvable** — soit le lien ne désigne aucun cours, soit il est privé et
+  votre compte n'y a pas accès. GitHub répond la même chose dans ces deux cas, pour ne pas
+  révéler l'existence d'un dépôt privé : vérifiez le lien avec la personne qui vous l'a
+  transmis, et demandez-lui si vous êtes bien membre du dépôt.
 
 ---
 
@@ -102,7 +112,7 @@ comme un ruban Word :
 | **Listes** | à puces, numérotée |
 | **Insérer** | bloc de code, texte littéral, lien, image, tableau |
 | **Encadrés** | note, astuce, important, avertissement |
-| **Copilot** | demander une proposition |
+| **Copilot** | proposer la suite, découper une slide, rédiger les notes orateur |
 
 **Survolez un bouton** : l'infobulle dit ce qu'il fait *et* la syntaxe exacte qu'il produit.
 La barre est donc aussi un aide-mémoire.
@@ -177,13 +187,13 @@ Ce que l'aperçu vous montre en plus du texte :
 Le formalisme ENI est plein de pièges silencieux : rien n'échoue, mais le support publié est
 faux. Polaris les cherche pendant que vous écrivez et les compte **en bas à droite**.
 
-| Pastille | Ce que ça veut dire |
+| Compteur | Ce que ça veut dire |
 |---|---|
-| **rouge** | du contenu **va disparaître** du support publié, ou la structure est cassée |
-| **jaune** | tout est là, mais le rendu sera fautif |
-| **bleue** | une slide est **trop chargée** pour la zone projetée |
+| **rouge** — « 2 non publiés » | du contenu **va disparaître** du support publié, ou la structure est cassée |
+| **jaune** — « 12 mal rendus » | tout est là, mais le rendu sera fautif |
+| **bleu** — « 3 slides trop chargées » | la slide déborde de la zone projetée |
 
-**Cliquez sur une pastille** : le curseur va au premier problème. Dans l'éditeur, le passage
+**Cliquez sur un compteur** : le curseur va au premier problème. Dans l'éditeur, le passage
 concerné est souligné, avec un marqueur dans la marge ; survolez-le pour lire ce qui est en
 cause. **F8** ouvre la liste et permet de passer d'un signalement au suivant.
 
@@ -224,16 +234,23 @@ ensuite ce qui s'est passé.
 Si le réseau tombe, **votre travail n'est pas perdu** : il est enregistré localement, et
 Polaris le dit clairement. Le bouton **↑ Envoyer** apparaît en bas pour réessayer plus tard.
 
-### Demander la relecture
+### Et ensuite ? La relecture
 
-Après une publication réussie, un bouton **Demander la relecture** apparaît. Polaris ouvre
-alors dans votre navigateur la page où proposer votre travail, et vous le confirme en bas de
-la fenêtre.
+Après une publication réussie, le panneau vous dit **sur quelle version de travail** votre
+cours est parti — par exemple « publié sur *eloise-menard* ». C'est l'information à
+transmettre à votre référent : elle suffit à retrouver votre travail.
 
-⚠️ **Il reste un clic à faire, dans le navigateur.** La page qui s'ouvre est un formulaire
-déjà rempli : votre demande n'existe qu'après avoir cliqué sur le bouton vert
-**« Create pull request »**. Tant que vous ne l'avez pas fait, votre travail est bien envoyé
-sur GitHub, mais personne n'a été sollicité pour le relire.
+**La demande de relecture elle-même se fait sur GitHub, et Polaris ne la fait pas à votre
+place.** C'est un choix : remplir ce formulaire — titre, description, choix de la branche
+cible, relecteurs — est un travail technique, et un bouton qui prétendrait le régler d'un clic
+vous mettrait devant une page que rien ne vous a préparé à lire.
+
+- **Vous ne connaissez pas GitHub ?** Prévenez votre référent que votre travail est publié, en
+  lui donnant le nom de votre version de travail. Il s'occupe de la suite.
+- **Vous êtes à l'aise avec GitHub ?** Le panneau affiche l'**adresse de la page de demande**,
+  toute prête. Un clic dessus la sélectionne entièrement : collez-la dans votre navigateur.
+  Le formulaire s'y ouvre déjà déplié ; votre demande n'existe qu'après avoir cliqué sur le
+  bouton vert **« Create pull request »**.
 
 ### Récupérer les modifications des autres
 
@@ -265,10 +282,20 @@ les dictionnaires sont embarqués dans Polaris.
 
 ---
 
-## 7. L'autocomplétion Copilot
+## 7. Se faire aider par Copilot
 
-Copilot propose la suite de votre cours, à partir de ce que vous avez déjà écrit. Ses
-propositions ressemblent donc à votre cours : séparateur, rôle de slide, titre, liste à puces.
+Copilot sait faire **trois choses** pour vous, toutes dans le groupe **Copilot** de la barre
+d'outils. Il travaille à partir de votre cours : ses propositions lui ressemblent — séparateur,
+rôle de slide, titre, liste à puces.
+
+| Bouton | Ce qu'il fait |
+|---|---|
+| **✨ Proposer la suite** | écrit la slide suivante, à partir de ce qui précède |
+| **▭ Découper cette slide** | répartit en deux la slide où est votre curseur |
+| **💬 Rédiger les notes orateur** | écrit le bloc de notes de cette slide |
+
+**Aucun des trois n'écrit dans votre cours sans votre accord.** La proposition s'affiche
+d'abord, vous la lisez, vous décidez. Une fois insérée, un seul `Ctrl+Z` l'annule.
 
 ### L'activer, une fois
 
@@ -286,7 +313,7 @@ désactiver depuis le même écran.
 > Polaris ne conserve **aucun mot de passe**. Votre jeton d'accès est rangé par Windows, au
 > même endroit que celui qui vous authentifie déjà auprès de GitHub.
 
-### Demander une proposition
+### Proposer la suite du cours
 
 Placez le curseur là où vous en êtes, puis cliquez sur le bouton **✨** de la barre d'outils
 (ou `Ctrl+K` puis « proposer »).
@@ -302,6 +329,42 @@ respecte le formalisme ENI.
 
 > **Rien à proposer ?** Ça arrive. Copilot s'appuie sur ce qui précède : il est plus utile
 > après un titre de slide ou en fin de liste qu'au milieu d'un paragraphe.
+
+### Découper une slide trop chargée
+
+Quand Polaris signale une slide **trop chargée** (le compteur bleu, en bas à droite), il vous
+disait jusqu'ici le problème sans proposer de solution. Placez le curseur **dans la slide**
+concernée, puis cliquez sur **▭ Découper cette slide**.
+
+Copilot répartit le contenu en deux slides — mêmes puces, même rôle de slide, séparateurs et
+titres compris. Comptez sept à huit secondes : la réponse s'écrit sous vos yeux pendant
+qu'elle arrive.
+
+La proposition **remplace la slide entière**, préambule compris. Le panneau vous le dit avant
+que vous n'insériez quoi que ce soit.
+
+⚠️ **Vérifiez la répartition.** Copilot ne doit rien inventer ni rien supprimer, seulement
+répartir — mais c'est à vous de le constater. Et Polaris ne sait pas encore vous dire si les
+deux nouvelles slides tiennent, elles, dans la zone projetée : le compteur se recalcule après
+l'insertion.
+
+### Faire rédiger les notes orateur
+
+Placez le curseur dans une slide, cliquez sur **💬 Rédiger les notes orateur**. Copilot écrit
+ce que vous direz à l'oral — pas ce qui est déjà écrit sur la slide — dans un bloc `[.notes]`
+ajouté **à la fin** de la slide. Rien n'est remplacé.
+
+### Ce qui est envoyé, et ce qui ne l'est pas
+
+**Seule la slide où se trouve votre curseur est envoyée**, jamais votre cours entier. C'est
+une règle de construction, pas une intention : Polaris ne sait pas envoyer autre chose.
+
+Ces demandes utilisent votre abonnement GitHub Copilot : il n'y a rien de plus à installer, ni
+à configurer, ni à payer. Une demande consomme environ une « interaction premium » sur les
+1 500 dont vous disposez chaque mois — soit largement plus d'un millier de demandes.
+
+> **Vous fermez le panneau pendant qu'il travaille ?** La demande est réellement interrompue.
+> Rien ne continue à tourner dans votre dos.
 
 ---
 
@@ -319,6 +382,11 @@ de ligne : cliquez dessus.
 Le fichier de configuration du cours n'est pas trouvé. Vérifiez que vous avez ouvert le
 **dossier du cours**, et non un fichier isolé. Le texte de remplacement d'une image affiche le
 chemin complet cherché, ce qui distingue « fichier absent » de « mauvais dossier ».
+
+**Un bloc de texte affiche ses quatre points dans l'aperçu.**
+Le bloc est décalé d'une espace : en AsciiDoc, une ligne qui commence par une espace n'est plus
+un délimiteur, c'est du texte. Le contrôle du document le signale en jaune — collez le
+délimiteur contre la marge, sans espace devant.
 
 **Publier échoue en parlant d'identifiants.**
 Votre poste n'a pas d'identifiants GitHub enregistrés. Faites un `git push` une fois en ligne
@@ -349,8 +417,11 @@ Autant le dire :
 
 - **Pas d'export PDF.** Il est conçu — un polycopié tiré du même fichier, pas une capture du
   diaporama — mais pas encore écrit.
-- **Copilot propose, il ne réorganise pas.** « Découpe cette slide qui déborde » ou « rédige
-  les notes orateur de cette slide » n'existent pas encore.
+- **Après une découpe, Polaris ne sait pas dire si les deux slides tiennent.** Le contrôle
+  « slide trop chargée » ne s'applique qu'à votre cours enregistré, pas à une proposition
+  affichée : il se recalcule une fois la proposition insérée.
+- **Polaris ne crée pas la demande de relecture.** Il vous donne l'adresse de la page ; le
+  formulaire se remplit sur GitHub (voir la section 5).
 - **Pas de recherche multi-fichiers**, ni de plusieurs onglets ouverts en même temps.
 - **Le plan du cours affiche les titres de support comme des slides.** Un titre écrit dans un
   bloc réservé au support formateur (« - Énoncé », « - Solution ») apparaît dans le plan comme

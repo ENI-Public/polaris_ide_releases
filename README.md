@@ -4,6 +4,10 @@
 telles que les verront vos apprenants, vérifie le formalisme ENI au fil de la frappe, et
 publie votre travail sur GitHub sans que vous ayez à connaître Git.
 
+Il sait aussi vous aider à écrire : proposer la suite d'un cours, **découper une slide trop
+chargée**, **rédiger des notes orateur**. Rien n'est écrit sans votre accord, et seule la
+slide concernée est envoyée.
+
 Ce dépôt ne contient **que les installateurs**. Il n'y a pas de code source ici.
 
 ➡️ **[Télécharger la dernière version](../../releases/latest)**
