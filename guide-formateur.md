@@ -1,6 +1,6 @@
 # Polaris IDE — guide du formateur
 
-Ce guide suit l'ordre dans lequel vous allez rencontrer les choses : récupérer un cours,
+Ce guide suit l'ordre dans lequel vous allez rencontrer les choses : ouvrir un cours,
 l'écrire, vérifier, publier. Vous n'avez pas besoin de le lire en entier avant de commencer —
 les deux premières sections suffisent pour travailler.
 
@@ -10,7 +10,7 @@ les deux premières sections suffisent pour travailler.
 
 **Sommaire**
 
-1. [Récupérer un cours](#1-récupérer-un-cours)
+1. [Ouvrir un cours](#1-ouvrir-un-cours)
 2. [Écrire son cours](#2-écrire-son-cours)
 3. [Voir ce que verront les apprenants](#3-voir-ce-que-verront-les-apprenants)
 4. [Ce que Polaris vérifie pour vous](#4-ce-que-polaris-vérifie-pour-vous)
@@ -22,39 +22,98 @@ les deux premières sections suffisent pour travailler.
 
 ---
 
-## 1. Récupérer un cours
+## 1. Ouvrir un cours
 
-Un cours ENI vit sur GitHub. On vous a donné un lien vers sa page. Vous n'avez rien à
-installer de plus, ni de ligne de commande à taper.
+Tout part d'un seul bouton, dans le bandeau du haut : **Ouvrir un cours…**. Quand aucun cours
+n'est ouvert, la même chose vous attend directement au milieu de l'écran.
 
-1. Dans le bandeau du haut, cliquez sur **⬇ Télécharger un cours…**
-2. Collez le lien qu'on vous a donné.
-3. Cliquez sur **Choisir…** pour indiquer où ranger le cours sur votre poste.
-   Polaris vous annonce le dossier qu'il va créer, avant de commencer.
-4. Cliquez sur **Télécharger le cours**.
+Trois onglets, trois façons d'arriver sur un cours.
 
-Comptez une dizaine de secondes : un cours transporte ses images. Polaris affiche
-l'avancement, puis **ouvre le cours tout seul** à la fin. Si le cours ne contient qu'un seul
-fichier `.adoc`, il est ouvert aussi : vous pouvez écrire immédiatement.
+### Reprendre un cours
+
+Polaris retient les cours que vous ouvrez, du plus récent au plus ancien, avec leur code et la
+date de la dernière ouverture. Un clic suffit pour y revenir.
+
+Si vous avez déplacé ou supprimé le dossier d'un cours, il reste affiché en grisé, avec une
+croix pour le retirer de la liste. **Le retirer ne supprime rien sur votre disque** : cela ne
+fait que nettoyer la liste.
+
+### Prendre un cours de l'école
+
+L'onglet **Cours de l'école** affiche les cours auxquels votre compte GitHub a accès. Cliquez
+sur **Afficher les cours de l'école** la première fois.
+
+- Les boutons **DEV**, **RES** et **TRA** filtrent par filière, et annoncent le nombre de cours
+  de chacune.
+- Le champ de recherche trouve un cours par son code, son titre ou sa description. Les accents
+  n'ont pas d'importance : « methodes » trouve « Méthodes ».
+- Cliquez sur un cours, indiquez où le ranger, puis **Télécharger le cours**.
+
+Le **compte utilisé** est affiché au-dessus de la liste. Si celle-ci vous paraît courte, c'est
+la première chose à regarder — surtout si vous avez plusieurs comptes GitHub sur ce poste.
+
+> **La liste est gardée sur votre poste.** Elle réapparaît aussitôt la fois suivante, avec sa
+> date. Le bouton **Actualiser** la remet à jour quand vous le voulez.
+
+#### Ce que Polaris utilise pour afficher cette liste
+
+Pour savoir à quels cours vous avez accès, Polaris a besoin de s'identifier auprès de GitHub. Il
+utilise pour cela les **identifiants déjà enregistrés sur votre poste** — exactement les mêmes
+que ceux qui servent à récupérer un cours et à publier votre travail. Vous n'avez rien de plus à
+saisir, ni à configurer.
+
+- **Polaris ne conserve aucun mot de passe ni aucun jeton d'accès.** Il les demande à Windows au
+  moment de la demande, s'en sert, et les oublie. Ce qui est gardé sur votre poste, c'est
+  uniquement la **liste des cours** : leurs noms et leurs dates.
+- **Rien n'est envoyé ailleurs qu'à GitHub**, et rien n'est demandé tant que vous n'avez pas
+  cliqué. Ouvrir l'onglet ne déclenche rien.
+- **Polaris ne lit que la liste des dépôts** auxquels votre compte a accès. Il ne parcourt pas
+  leur contenu, et ne voit rien des dépôts auxquels vous n'avez pas accès.
+
+### Ouvrir un dossier de votre poste
+
+Si le cours est déjà chez vous — parce que vous l'avez récupéré avant, ou qu'on vous l'a
+copié — l'onglet **Sur mon poste** ouvre son dossier directement.
+
+### Coller un lien, si le cours n'est pas dans la liste
+
+Sous la liste, un champ attend un lien. Il sert pour un cours tout neuf, qui n'y figure pas
+encore, ou pour un lien qu'on vous a transmis.
+
+Collez l'adresse de la page GitHub du cours, indiquez où le ranger, et **Télécharger le cours**.
+Comptez une dizaine de secondes : un cours transporte ses images. Polaris affiche l'avancement,
+puis **ouvre le cours tout seul** à la fin. Si le cours ne contient qu'un seul fichier `.adoc`,
+il est ouvert aussi : vous pouvez écrire immédiatement.
 
 L'emplacement que vous avez choisi est retenu. Au cours suivant, il est déjà là.
 
-> **Vous avez déjà le cours sur votre poste ?** Utilisez **📂 Ouvrir un cours…** à la place, et
-> désignez le dossier.
+> **N'importe quel lien de la page du cours fait l'affaire.** Si vous copiez la barre d'adresse
+> de votre navigateur en regardant un fichier ou une branche — une adresse du genre
+> `.../mon-cours/blob/main/cours.adoc` — Polaris la ramène tout seul au cours lui-même. Un lien
+> collé au milieu d'une phrase, depuis un message ou un mail, fonctionne aussi.
 
-> **N'importe quel lien de la page du cours fait l'affaire.** Si vous copiez la barre
-> d'adresse de votre navigateur en regardant un fichier ou une branche — une adresse du genre
-> `.../mon-cours/blob/main/cours.adoc` — Polaris la ramène tout seul au cours lui-même.
+> **Si le lien ne désigne pas un cours**, Polaris vous le dit avant d'essayer, et vous indique à
+> quoi ressemble le bon lien. Le lien d'une organisation, celui d'un fichier brut ou celui du
+> site publié ne sont pas des liens de cours.
 
-**Si le téléchargement échoue**, le message vous dit laquelle des deux situations vous
-concerne :
+### Si la récupération échoue
 
-- **votre poste n'a pas d'identifiants GitHub enregistrés** — un `git push` en ligne de
-  commande, une fois, suffit à les enregistrer ; demandez à votre référent ;
-- **le cours reste introuvable** — soit le lien ne désigne aucun cours, soit il est privé et
-  votre compte n'y a pas accès. GitHub répond la même chose dans ces deux cas, pour ne pas
-  révéler l'existence d'un dépôt privé : vérifiez le lien avec la personne qui vous l'a
-  transmis, et demandez-lui si vous êtes bien membre du dépôt.
+Le message vous dit laquelle des situations vous concerne.
+
+**« Ton poste n'a pas encore d'identifiants GitHub enregistrés. »** Une première récupération en
+ligne de commande (`git clone`) suffit à les enregistrer ; Polaris les réutilisera ensuite.
+Demandez à votre référent si vous ne savez pas comment faire.
+
+**« Pour ce compte-là, ce cours n'existe pas. »** GitHub répond la même chose qu'un cours soit
+absent ou simplement invisible pour le compte utilisé : il ne révèle pas l'existence d'un dépôt
+privé. Le message **nomme le compte** qui vient d'être utilisé, et il y a trois causes, de la
+plus fréquente à la plus rare :
+
+1. **Ce n'est pas le bon compte.** Si vous avez plusieurs comptes GitHub sur ce poste, vérifiez
+   que celui qui a été utilisé est bien celui qui a accès aux cours.
+2. **Votre compte n'a pas encore accès à ce cours.** Demandez à l'ingénierie pédagogique de vous
+   ajouter au dépôt.
+3. **Le lien ne désigne pas ce cours.** Vérifiez-le avec la personne qui vous l'a transmis.
 
 ---
 
@@ -216,6 +275,11 @@ votre travail part ensuite en relecture. Polaris s'occupe de tout ça.
 **💾 Enregistrer** (ou `Ctrl+S`) écrit le fichier sur votre poste. C'est tout. Publier, c'est
 l'étape suivante, et elle est volontaire.
 
+> **Si vous fermez Polaris sans avoir enregistré**, une fenêtre vous prévient et nomme le
+> fichier concerné. Vous choisissez : **Enregistrer et fermer**, **Annuler**, ou **Fermer sans
+> enregistrer**. Et si l'enregistrement échoue — disque plein, fichier en lecture seule —
+> Polaris **ne ferme pas** : votre travail reste là, et le message dit pourquoi.
+
 ### Publier
 
 1. En bas à gauche, cliquez sur **🗂 Mon travail**. Le panneau s'ouvre et liste ce que vous
@@ -248,9 +312,11 @@ vous mettrait devant une page que rien ne vous a préparé à lire.
 - **Vous ne connaissez pas GitHub ?** Prévenez votre référent que votre travail est publié, en
   lui donnant le nom de votre version de travail. Il s'occupe de la suite.
 - **Vous êtes à l'aise avec GitHub ?** Le panneau affiche l'**adresse de la page de demande**,
-  toute prête. Un clic dessus la sélectionne entièrement : collez-la dans votre navigateur.
-  Le formulaire s'y ouvre déjà déplié ; votre demande n'existe qu'après avoir cliqué sur le
+  toute prête, avec un bouton **Copier** à droite. Collez-la dans votre navigateur : le
+  formulaire s'y ouvre déjà déplié, et votre demande n'existe qu'après avoir cliqué sur le
   bouton vert **« Create pull request »**.
+  *(Si la copie échoue sur votre poste, Polaris vous le dit : cliquez alors sur l'adresse
+  elle-même, elle se sélectionne en entier, puis `Ctrl+C`.)*
 
 ### Récupérer les modifications des autres
 
@@ -356,8 +422,28 @@ ajouté **à la fin** de la slide. Rien n'est remplacé.
 
 ### Ce qui est envoyé, et ce qui ne l'est pas
 
-**Seule la slide où se trouve votre curseur est envoyée**, jamais votre cours entier. C'est
-une règle de construction, pas une intention : Polaris ne sait pas envoyer autre chose.
+Copilot travaille chez GitHub, pas sur votre poste : pour vous répondre, il faut lui envoyer
+du texte. Ce qui part **dépend du bouton**, et il vaut mieux le savoir avant d'activer.
+
+**Tant que Copilot n'est pas activé, rien ne part.** Aucun des trois boutons n'existe, et
+l'éditeur ne parle à personne. C'est l'état par défaut d'un poste neuf.
+
+**Une fois Copilot activé, le cours ouvert est envoyé en entier**, dès son ouverture, puis au
+fil de vos modifications — sans que vous ayez à cliquer sur quoi que ce soit. C'est ce qui
+permet à **✨ Proposer la suite** de connaître ce que vous avez écrit plus haut. C'est aussi
+exactement ce que fait Copilot dans VS Code, où beaucoup d'entre vous l'utilisent déjà sur ces
+mêmes fichiers. ⚠️ **Un cours entier, cela comprend les énoncés et les corrigés de TP** : ils
+sont dans le même fichier.
+
+**Les deux demandes dirigées, elles, n'envoient que la slide de votre curseur.**
+**▭ Découper cette slide** et **💬 Rédiger les notes orateur** joignent le texte de cette
+seule slide à leur consigne — une quinzaine de lignes, pas votre cours. Là, c'est une règle
+de construction : ces deux demandes ne savent pas envoyer autre chose.
+
+> **Vous préférez ne rien envoyer du tout ?** Laissez Copilot désactivé, ou désactivez-le
+> depuis **Réglages → Autocomplétion Copilot…**. Tout le reste de Polaris — l'aperçu, le
+> correcteur, le contrôle du formalisme, Git — fonctionne à l'identique et reste sur votre
+> poste.
 
 Ces demandes utilisent votre abonnement GitHub Copilot : il n'y a rien de plus à installer, ni
 à configurer, ni à payer. Une demande consomme environ une « interaction premium » sur les
