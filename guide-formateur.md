@@ -221,6 +221,23 @@ Après insertion, appuyez sur **Tab** pour passer d'un emplacement à remplir au
   `assets/images/` et lui donne le numéro suivant, de dix en dix (10, 20, 30…). Les valeurs
   intermédiaires restent libres pour insérer une image plus tard sans tout renuméroter.
 
+### Coller une capture d'écran
+
+Vous venez de faire une capture — **Impr. écran**, ou **Windows + Maj + S** — et elle est dans
+votre presse-papiers. Cliquez à l'endroit voulu dans votre cours et collez : la fenêtre d'ajout
+d'image s'ouvre directement avec votre capture. Vous n'avez pas à l'enregistrer d'abord.
+
+Elle reçoit le prochain numéro ENI, comme n'importe quelle image, et le fichier est copié dans
+`assets/images/`.
+
+> **Pensez au texte alternatif.** Une capture n'a pas de nom de fichier dont Polaris pourrait
+> le déduire : le champ est donc vide, et c'est à vous de dire ce que montre l'image. C'est ce
+> texte que liront les apprenants qui ne voient pas l'écran, et celui qui s'affiche si l'image
+> se perd.
+
+Si vous collez à l'intérieur d'un bloc de code, Polaris refuse et vous le dit : une image n'a
+pas sa place dans un bloc de code, elle s'y afficherait en toutes lettres.
+
 ### Se repérer dans un long cours
 
 - **Le plan du cours**, dans le panneau de gauche, liste vos modules et vos slides. Cliquez
@@ -297,6 +314,12 @@ l'étape suivante, et elle est volontaire.
    signera vos enregistrements ; il n'est demandé qu'une fois, pour tous vos cours.
 3. Écrivez une phrase qui dit ce que vous avez changé — elle est destinée à la personne qui
    relira.
+
+   > **Si Copilot est activé**, un bouton **Proposer un message** apparaît au-dessus du
+   > champ. Copilot lit ce que vous avez modifié et propose une phrase. Elle s'affiche **à
+   > côté** du champ, pas dedans : rien n'est retenu tant que vous n'avez pas cliqué sur
+   > **Utiliser ce message**, et vous pouvez ensuite la corriger. Ce que Copilot reçoit dans
+   > ce cas est décrit à la section 7.
 4. Cliquez sur **Publier mon travail**.
 
 Polaris crée votre version de travail si nécessaire, enregistre, puis envoie. Il vous dit
@@ -448,6 +471,13 @@ sont dans le même fichier.
 **▭ Découper cette slide** et **💬 Rédiger les notes orateur** joignent le texte de cette
 seule slide à leur consigne — une quinzaine de lignes, pas votre cours. Là, c'est une règle
 de construction : ces deux demandes ne savent pas envoyer autre chose.
+
+**« Proposer un message » envoie ce que vous venez de changer.** Ce bouton, dans le panneau
+**Mon travail**, joint à sa consigne la liste des fichiers touchés et le **détail de vos
+modifications** — c'est-à-dire du contenu de cours, celui des passages que vous avez
+retouchés. Deux limites de construction : les images et les autres fichiers non textuels ne
+sont **jamais** envoyés, seulement cités par leur nom ; et le détail est plafonné, une grosse
+réorganisation n'expédie donc pas tout le cours.
 
 > **Vous préférez ne rien envoyer du tout ?** Laissez Copilot désactivé, ou désactivez-le
 > depuis **Réglages → Autocomplétion Copilot…**. Tout le reste de Polaris — l'aperçu, le
