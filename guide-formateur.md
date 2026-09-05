@@ -124,6 +124,37 @@ plus fréquente à la plus rare :
    ajouter au dépôt.
 3. **Le lien ne désigne pas ce cours.** Vérifiez-le avec la personne qui vous l'a transmis.
 
+### Les informations du cours : la fiche
+
+Un cours porte des informations que l'école attend : son code, son titre, sa durée, son public,
+son niveau, son cursus. Elles servent à la page de garde de votre support, aux thèmes graphiques
+et aux traitements automatiques de l'école.
+
+Elles sont écrites en haut de votre fichier, mais **vous n'avez pas à les y taper**. Dans le
+bandeau, le bouton **ⓘ Fiche du cours…** ouvre un formulaire :
+
+- le **code du cours** est déjà rempli, repris du nom du dépôt ;
+- le **niveau** et le **cursus** se choisissent dans une liste — impossible de se tromper de
+  valeur ;
+- les champs **obligatoires** portent la mention « obligatoire » et un liseré orange tant
+  qu'ils sont vides.
+
+Une pastille sur le bouton indique combien il en reste à compléter.
+
+> **Sur un cours tout neuf, tout est vide, et c'est normal.** Les cours sont créés à partir
+> d'un modèle qui laisse ces informations à remplir. C'est la première chose à faire en
+> recevant un cours.
+
+**Tant qu'une information obligatoire manque, vous ne pouvez pas publier.** Le bouton de
+publication est alors remplacé par **Compléter la fiche du cours**, qui vous y emmène.
+Enregistrer votre travail sur votre poste (`Ctrl+S`) reste toujours possible : c'est seulement
+l'envoi vers l'école qui attend.
+
+> **Où sont passées ces lignes dans l'éditeur ?** Elles sont **repliées** : le haut de votre
+> fichier contient une trentaine de lignes de réglages et d'explications, qui n'ont pas à vous
+> encombrer. Votre cours commence donc à son premier module. Cliquez sur le **▸** de la
+> première ligne pour les revoir — rien n'est caché, seulement plié.
+
 ---
 
 ## 2. Écrire son cours
@@ -286,6 +317,10 @@ cause. **F8** ouvre la liste et permet de passer d'un signalement au suivant.
 > qui suit — parfois des modules entiers. Polaris le signale en tête du plan du cours, parce
 > que sinon on croit à un bug de l'outil.
 
+> **Sur un cours tout neuf, le compteur rouge annonce les informations du cours** qui restent
+> à remplir. Ce n'est pas que votre cours est cassé : c'est ce par quoi commencer. Voir la
+> [fiche du cours](#les-informations-du-cours-la-fiche).
+
 Les mots absents du dictionnaire sont soulignés **en bleu pointillé**, jamais en rouge.
 Survolez-les pour voir les corrections proposées, ou pour ajouter le mot à votre dictionnaire.
 
@@ -307,6 +342,11 @@ l'étape suivante, et elle est volontaire.
 > Polaris **ne ferme pas** : votre travail reste là, et le message dit pourquoi.
 
 ### Publier
+
+> **Avant tout : la fiche du cours doit être complète.** Si le bouton du bandeau affiche
+> **Compléter la fiche du cours**, c'est qu'il manque une information obligatoire — cliquez
+> dessus, remplissez, revenez. Vous ne perdez rien en attendant : votre travail est enregistré
+> sur votre poste, seule la publication patiente.
 
 1. En bas à gauche, cliquez sur **🗂 Mon travail**. Le panneau s'ouvre et liste ce que vous
    avez changé — cliquez sur un fichier pour voir précisément quoi.
@@ -372,8 +412,8 @@ et ce que verront les apprenants ne bougent pas.
 - **Affichage confortable** : le même réglage que le bouton **Vue** de la barre d'outils.
   Décrit en détail au chapitre 2.
 - **Correcteur orthographique** : à décocher si vous préférez écrire sans.
-- **Mots que vous avez ajoutés** : replié par défaut, avec le nombre. Dépliez-le pour retirer
-  un mot que vous auriez admis par erreur.
+- **Mots que tu as ajoutés** (c'est le libellé exact à l'écran) : replié par défaut, avec le
+  nombre. Dépliez-le pour retirer un mot que vous auriez admis par erreur.
 
 Tout est réglé sur votre poste et retenu d'une session à l'autre. Rien ne part sur le réseau :
 les dictionnaires sont embarqués dans Polaris.
@@ -425,8 +465,10 @@ respecte le formalisme ENI.
 - **Autre proposition** en redemande.
 - **Ignorer** ferme sans rien changer.
 
-> **Rien à proposer ?** Ça arrive. Copilot s'appuie sur ce qui précède : il est plus utile
-> après un titre de slide ou en fin de liste qu'au milieu d'un paragraphe.
+> **Rien à proposer ?** Ça arrive, et Polaris vous dit **à partir de quelle ligne** il a posé
+> la question : Copilot continue ce qui précède, il ne devine pas à partir d'une ligne vide.
+> Si votre curseur est dans un bloc de code, il vous le dit aussi — il n'y a rien à continuer
+> là. Placez-le dans le texte de la slide, puis redemandez.
 
 ### Découper une slide trop chargée
 
@@ -567,5 +609,8 @@ Autant le dire :
 - **Le plan du cours affiche les titres de support comme des slides.** Un titre écrit dans un
   bloc réservé au support formateur (« - Énoncé », « - Solution ») apparaît dans le plan comme
   s'il était projeté. L'aperçu, lui, fait la différence correctement.
+- **Pas d'explorateur de fichiers.** Polaris ouvre le `cours.adoc` de votre dossier et n'édite
+  que celui-là. Les autres fichiers d'un cours — la configuration, les automatisations — sont
+  techniques et ne se modifient pas ici.
 - **macOS** : la publication vers GitHub n'a pas encore été vérifiée sur Mac.
 - **Linux** : une installation par `.deb` ou `.rpm` ne peut pas se mettre à jour toute seule.
