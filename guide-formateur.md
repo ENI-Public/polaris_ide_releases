@@ -124,14 +124,15 @@ plus fréquente à la plus rare :
    ajouter au dépôt.
 3. **Le lien ne désigne pas ce cours.** Vérifiez-le avec la personne qui vous l'a transmis.
 
-### Les informations du cours : la fiche
+### Les informations du cours
 
 Un cours porte des informations que l'école attend : son code, son titre, sa durée, son public,
 son niveau, son cursus. Elles servent à la page de garde de votre support, aux thèmes graphiques
 et aux traitements automatiques de l'école.
 
 Elles sont écrites en haut de votre fichier, mais **vous n'avez pas à les y taper**. Dans le
-bandeau, le bouton **ⓘ Fiche du cours…** ouvre un formulaire :
+bandeau, le bouton **ⓘ Infos du cours…** — celui qui est bleu, à côté du nom de votre cours —
+ouvre un formulaire :
 
 - le **code du cours** est déjà rempli, repris du nom du dépôt ;
 - le **niveau** et le **cursus** se choisissent dans une liste — impossible de se tromper de
@@ -146,7 +147,7 @@ Une pastille sur le bouton indique combien il en reste à compléter.
 > recevant un cours.
 
 **Tant qu'une information obligatoire manque, vous ne pouvez pas publier.** Le bouton de
-publication est alors remplacé par **Compléter la fiche du cours**, qui vous y emmène.
+publication est alors remplacé par **Compléter les infos du cours**, qui vous y emmène.
 Enregistrer votre travail sur votre poste (`Ctrl+S`) reste toujours possible : c'est seulement
 l'envoi vers l'école qui attend.
 
@@ -154,6 +155,11 @@ l'envoi vers l'école qui attend.
 > fichier contient une trentaine de lignes de réglages et d'explications, qui n'ont pas à vous
 > encombrer. Votre cours commence donc à son premier module. Cliquez sur le **▸** de la
 > première ligne pour les revoir — rien n'est caché, seulement plié.
+
+> **La slide « Public visé » est repliée elle aussi**, pour la même raison : elle ne contient
+> pas de texte, mais un **renvoi** vers le public que vous avez saisi ici. Si vous l'ouvriez
+> pour y écrire, votre cours cesserait de suivre ce formulaire. Corrigez le public dans les
+> infos du cours : la slide se met à jour toute seule.
 
 ---
 
@@ -207,7 +213,7 @@ comme un ruban Word :
 | Groupe | Ce qu'on y trouve |
 |---|---|
 | **Texte** | gras, italique, code |
-| **Titres** | module, slide, sous-section |
+| **Titres** | module, slide standard, sous-section |
 | **Listes** | à puces, numérotée |
 | **Insérer** | bloc de code, texte littéral, lien, image, tableau |
 | **Encadrés** | note, astuce, important, avertissement |
@@ -248,6 +254,11 @@ Après insertion, appuyez sur **Tab** pour passer d'un emplacement à remplir au
 
 - **Le séparateur de slide.** Tapez `== ` ou `=== ` en début de ligne : Polaris insère
   au-dessus la ligne de séparation ENI. Un seul `Ctrl+Z` annule les deux.
+- **Le type de la slide.** Le bouton **Titre de slide standard** (groupe *Titres*) ne pose pas
+  que le titre : il ajoute aussi le séparateur et la ligne `[.standard-slide]`, sans laquelle
+  la slide n'aurait pas de gabarit. Si la ligne du dessus annonce déjà un type — un TP, une
+  démo — Polaris le laisse tel quel. Pour les deux autres types, passez par les templates
+  `eni-tp` et `eni-demo`, qui apportent en plus l'énoncé ou le déroulé.
 - **Le numéro d'image.** Le bouton d'ajout d'image copie votre fichier dans
   `assets/images/` et lui donne le numéro suivant, de dix en dix (10, 20, 30…). Les valeurs
   intermédiaires restent libres pour insérer une image plus tard sans tout renuméroter.
@@ -313,13 +324,20 @@ faux. Polaris les cherche pendant que vous écrivez et les compte **en bas à dr
 concerné est souligné, avec un marqueur dans la marge ; survolez-le pour lire ce qui est en
 cause. **F8** ouvre la liste et permet de passer d'un signalement au suivant.
 
+> **Certains signalements se corrigent d'un clic.** Quand Polaris sait quoi faire sans risque
+> de se tromper, l'infobulle propose des **boutons de correction** sous le message. Par
+> exemple, sur une slide à laquelle il manque son type, on vous propose les trois : slide de
+> contenu classique, de démonstration, de travaux pratiques. Vous cliquez sur celui qui
+> convient, la ligne est écrite au bon endroit et le signalement disparaît. Un `Ctrl+Z` annule
+> la correction comme n'importe quelle frappe.
+
 > **Le cas le plus fréquent** : un bloc de code jamais refermé. Il fait disparaître tout ce
 > qui suit — parfois des modules entiers. Polaris le signale en tête du plan du cours, parce
 > que sinon on croit à un bug de l'outil.
 
 > **Sur un cours tout neuf, le compteur rouge annonce les informations du cours** qui restent
-> à remplir. Ce n'est pas que votre cours est cassé : c'est ce par quoi commencer. Voir la
-> [fiche du cours](#les-informations-du-cours-la-fiche).
+> à remplir. Ce n'est pas que votre cours est cassé : c'est ce par quoi commencer. Voir
+> [Les informations du cours](#les-informations-du-cours).
 
 Les mots absents du dictionnaire sont soulignés **en bleu pointillé**, jamais en rouge.
 Survolez-les pour voir les corrections proposées, ou pour ajouter le mot à votre dictionnaire.
@@ -343,8 +361,8 @@ l'étape suivante, et elle est volontaire.
 
 ### Publier
 
-> **Avant tout : la fiche du cours doit être complète.** Si le bouton du bandeau affiche
-> **Compléter la fiche du cours**, c'est qu'il manque une information obligatoire — cliquez
+> **Avant tout : les infos du cours doivent être complètes.** Si le bouton du bandeau affiche
+> **Compléter les infos du cours**, c'est qu'il manque une information obligatoire — cliquez
 > dessus, remplissez, revenez. Vous ne perdez rien en attendant : votre travail est enregistré
 > sur votre poste, seule la publication patiente.
 
@@ -606,9 +624,6 @@ Autant le dire :
 - **Polaris ne crée pas la demande de relecture.** Il vous donne l'adresse de la page ; le
   formulaire se remplit sur GitHub (voir la section 5).
 - **Pas de recherche multi-fichiers**, ni de plusieurs onglets ouverts en même temps.
-- **Le plan du cours affiche les titres de support comme des slides.** Un titre écrit dans un
-  bloc réservé au support formateur (« - Énoncé », « - Solution ») apparaît dans le plan comme
-  s'il était projeté. L'aperçu, lui, fait la différence correctement.
 - **Pas d'explorateur de fichiers.** Polaris ouvre le `cours.adoc` de votre dossier et n'édite
   que celui-là. Les autres fichiers d'un cours — la configuration, les automatisations — sont
   techniques et ne se modifient pas ici.
