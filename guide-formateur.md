@@ -75,6 +75,15 @@ saisir, ni à configurer.
 Si le cours est déjà chez vous — parce que vous l'avez récupéré avant, ou qu'on vous l'a
 copié — l'onglet **Sur mon poste** ouvre son dossier directement.
 
+> **Quelle que soit la façon dont vous arrivez, Polaris ouvre le cours tout seul.** Un cours
+> ENI tient dans un seul fichier, `cours.adoc`, et c'est celui-là que vous éditez : vous n'avez
+> plus à le désigner. Le nom du cours s'affiche dans le bandeau du haut, et le panneau de
+> gauche montre son plan.
+>
+> Si Polaris vous répond que le dossier **ne contient pas de `cours.adoc`**, c'est presque
+> toujours qu'un dossier au-dessus a été désigné : reprenez en choisissant le dossier **du
+> cours lui-même**, celui qui porte son code (par exemple `DEV24_0350B-devops`).
+
 ### Coller un lien, si le cours n'est pas dans la liste
 
 Sous la liste, un champ attend un lien. Il sert pour un cours tout neuf, qui n'y figure pas
@@ -494,6 +503,22 @@ serveur se relance.
 **Le bandeau de mise à jour ne s'affiche pas alors qu'une version est sortie.**
 La vérification a lieu quelques secondes après le démarrage, puis une fois par jour. Fermez
 Polaris, rouvrez-le, et attendez cinq secondes.
+
+### Rien de tout cela ? Signalez-le
+
+**Réglages → Signaler un problème…** Une fenêtre vous explique ce qui va se passer, puis ouvre
+une page GitHub dans votre navigateur, avec le formulaire déjà rempli de ce que vous ne sauriez
+pas donner : la version de Polaris, votre système, et la façon dont il a été installé. Vous
+n'avez qu'à raconter ce que vous faisiez et ce qui s'est passé.
+
+Deux choses à savoir :
+
+- **Rien n'est envoyé quand vous cliquez.** La page s'ouvre, et c'est vous qui envoyez, depuis
+  GitHub. Tant que vous ne l'avez pas fait, personne ne voit rien.
+- **Le signalement est public.** N'y recopiez pas de contenu de cours — ni énoncé, ni corrigé
+  de TP. Décrire le problème suffit ; si une slide précise est en cause, dites son titre.
+
+Si votre navigateur ne s'ouvre pas, Polaris affiche l'adresse et un bouton pour la copier.
 
 ---
 
