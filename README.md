@@ -5,8 +5,12 @@ telles que les verront vos apprenants, vérifie le formalisme ENI au fil de la f
 publie votre travail sur GitHub sans que vous ayez à connaître Git.
 
 Il sait aussi vous aider à écrire : proposer la suite d'un cours, **découper une slide trop
-chargée**, **rédiger des notes orateur**. Rien n'est écrit sans votre accord, et seule la
-slide concernée est envoyée.
+chargée**, **rédiger des notes orateur**. Rien n'est écrit sans votre accord. Ce qui est
+envoyé à Copilot dépend de la demande, et le guide le détaille : la découpe et les notes
+n'envoient que la slide concernée, la proposition de suite transmet le fichier.
+
+Et **votre travail est protégé** : Polaris garde une copie de secours sur votre poste et vous
+la propose si l'application s'est arrêtée sans prévenir.
 
 Ce dépôt ne contient **que les installateurs**. Il n'y a pas de code source ici.
 
@@ -99,7 +103,7 @@ avec la liste des nouveautés.
   redémarre.
 
 Pour savoir ce qu'apporte la version que vous avez déjà : survolez le **numéro de version**
-en bas à droite de la fenêtre.
+en bas à droite de la fenêtre — ou atteignez-le au clavier, le panneau s'ouvre pareil.
 
 ---
 

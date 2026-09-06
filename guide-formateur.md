@@ -17,8 +17,9 @@ les deux premières sections suffisent pour travailler.
 5. [Publier son travail](#5-publier-son-travail)
 6. [Régler son confort de lecture](#6-régler-son-confort-de-lecture)
 7. [Se faire aider par Copilot](#7-se-faire-aider-par-copilot)
-8. [Quand ça coince](#8-quand-ça-coince)
-9. [Ce que Polaris ne sait pas encore faire](#9-ce-que-polaris-ne-sait-pas-encore-faire)
+8. [Tout se fait au clavier](#8-tout-se-fait-au-clavier)
+9. [Quand ça coince](#9-quand-ça-coince)
+10. [Ce que Polaris ne sait pas encore faire](#10-ce-que-polaris-ne-sait-pas-encore-faire)
 
 ---
 
@@ -174,12 +175,17 @@ Un cours en AsciiDoc contient des signes qui servent à la mise en forme : `===`
 titre, `*mot*` pour du gras, `[.tp-slide]` avant un TP. Rien de compliqué, mais quand on
 n'y est pas habitué, ça encombre la lecture.
 
-Au centre de la barre d'outils, un bouton **Vue** propose deux affichages :
+À **droite** de la barre d'outils, sous le titre **Affichage**, deux icônes proposent
+deux vues :
 
 | | |
 |---|---|
-| **AsciiDoc** | le cours tel qu'il est écrit, avec les signes de mise en forme |
-| **Texte** | les signes masqués, le texte mis en forme |
+| **¶** | *AsciiDoc* — le cours tel qu'il est écrit, avec les signes de mise en forme |
+| **≡** | *Texte* — les signes masqués, le texte mis en forme |
+
+Le **¶** est le même signe que le bouton « Afficher les marques de mise en forme » de Word :
+il montre ce qui est habituellement caché. Passez la souris dessus, ou atteignez-les au
+clavier, pour voir leur nom.
 
 En choisissant **Texte**, Polaris **masque ces signes et met votre texte en forme directement
 dans l'éditeur** : les titres s'affichent en grand, le gras en gras, les puces en puces, et les
@@ -241,6 +247,10 @@ formalisme de l'école :
 
 Après insertion, appuyez sur **Tab** pour passer d'un emplacement à remplir au suivant.
 
+> **Au centre de la barre**, deux groupes nommés **Recherche** et **Palette** : le premier
+> ouvre la recherche par périmètre (section 4), le second la palette de commandes. À droite,
+> le groupe **Affichage** réunit le choix de vue et le repli de l'aperçu.
+
 ### Deux raccourcis qui font gagner du temps
 
 - **`Ctrl+K`** ouvre une barre de recherche unique : tapez trois lettres et vous trouvez une
@@ -290,6 +300,12 @@ pas sa place dans un bloc de code, elle s'y afficherait en toutes lettres.
 ---
 
 ## 3. Voir ce que verront les apprenants
+
+> **Vous pouvez replier l'aperçu.** À droite de la barre d'outils, sous le titre
+> **Affichage**, la troisième icône montre une fenêtre coupée en deux. Cliquez : l'aperçu
+> disparaît et toute la largeur revient à l'écriture — pratique pour un long bloc de code ou
+> un tableau. Recliquez pour le revoir. Votre choix est retenu d'une session à l'autre, et le
+> cours n'est pas modifié.
 
 La colonne de droite affiche votre cours **mis en page comme le support publié**, avec la
 charte de votre cursus. Elle se met à jour pendant que vous écrivez, et **suit votre
@@ -354,10 +370,43 @@ votre travail part ensuite en relecture. Polaris s'occupe de tout ça.
 **💾 Enregistrer** (ou `Ctrl+S`) écrit le fichier sur votre poste. C'est tout. Publier, c'est
 l'étape suivante, et elle est volontaire.
 
+Le bouton **change de couleur selon ce qu'il propose**, et c'est une escalade :
+
+| | |
+|---|---|
+| **vert** | Enregistrer — c'est sur votre poste, c'est sans risque |
+| **ambre** | Compléter les infos du cours — il manque quelque chose |
+| **orange** | Publier mon travail — cette fois, le travail quitte votre poste |
+
 > **Si vous fermez Polaris sans avoir enregistré**, une fenêtre vous prévient et nomme le
 > fichier concerné. Vous choisissez : **Enregistrer et fermer**, **Annuler**, ou **Fermer sans
 > enregistrer**. Et si l'enregistrement échoue — disque plein, fichier en lecture seule —
 > Polaris **ne ferme pas** : votre travail reste là, et le message dit pourquoi.
+
+### Si Polaris s'arrête sans prévenir
+
+La fenêtre ci-dessus vous protège d'un clic sur la croix. Elle ne peut rien contre une coupure
+de courant, un plantage, ou un redémarrage imposé par Windows — et une session de formation
+dure la semaine, l'app restant ouverte tout du long.
+
+**Toutes les trois secondes, Polaris range donc une copie de votre travail en cours sur votre
+poste.** À la réouverture du cours, s'il retrouve du travail plus récent que le fichier, un
+bandeau ambre s'affiche au-dessus de l'éditeur :
+
+> Du travail non enregistré a été retrouvé sur ce poste (il y a 12 minutes). Polaris s'est
+> peut-être arrêté sans prévenir.
+
+Deux boutons : **Récupérer ce travail**, qui remet le texte retrouvé dans l'éditeur, et
+**Ignorer**, qui ferme simplement le bandeau.
+
+Trois choses à savoir :
+
+- **Polaris ne remet jamais rien tout seul.** Il propose, vous décidez. Votre fichier n'est
+  écrit que quand vous enregistrez, comme avant.
+- **Après récupération, le travail n'est pas enregistré** : le document redevient « modifié »,
+  à vous de faire `Ctrl+S` une fois que vous avez vérifié que c'est bien ce que vous vouliez.
+- **La copie ne quitte pas votre poste.** Elle n'est ni envoyée, ni publiée, ni partagée, et
+  elle est effacée dès que vous enregistrez.
 
 ### Publier
 
@@ -553,7 +602,27 @@ Ces demandes utilisent votre abonnement GitHub Copilot : il n'y a rien de plus �
 
 ---
 
-## 8. Quand ça coince
+## 8. Tout se fait au clavier
+
+Si vous n'utilisez pas la souris, ou peu :
+
+- **`Tab` en arrivant** fait apparaître un bouton **Aller à l'éditeur** : il vous place
+  directement dans le texte, sans traverser la barre d'outils.
+- **La barre d'outils ne coûte qu'un `Tab`.** Une fois dedans, les flèches gauche et droite
+  passent d'un bouton à l'autre, `Début` et `Fin` vont aux extrémités.
+- **Le plan du cours ne coûte qu'un `Tab`** lui aussi. Les flèches haut et bas parcourent les
+  titres, gauche et droite replient et déplient un module ou un TP, `Entrée` va à la slide.
+- **Les fenêtres gardent le clavier.** `Tab` y tourne en rond au lieu de partir derrière, et
+  `Échap` referme en vous ramenant au bouton d'où vous veniez.
+- **La barre d'outils affiche la syntaxe du bouton où vous êtes**, juste en dessous — au
+  clavier comme à la souris. C'est l'aide-mémoire AsciiDoc, sans avoir à survoler.
+
+Les raccourcis restent : `Ctrl+S` enregistrer, `Ctrl+F` chercher, `Ctrl+H` remplacer,
+`Ctrl+K` la palette, `Ctrl+Espace` l'autocomplétion, `F8` la liste des signalements.
+
+---
+
+## 9. Quand ça coince
 
 **L'aperçu est en noir et blanc, sans mise en page ENI.**
 Pas de réseau. La charte graphique est chargée en ligne. Vous pouvez écrire, le cours n'est
@@ -612,7 +681,7 @@ Si votre navigateur ne s'ouvre pas, Polaris affiche l'adresse et un bouton pour 
 
 ---
 
-## 9. Ce que Polaris ne sait pas encore faire
+## 10. Ce que Polaris ne sait pas encore faire
 
 Autant le dire :
 
@@ -624,6 +693,10 @@ Autant le dire :
 - **Polaris ne crée pas la demande de relecture.** Il vous donne l'adresse de la page ; le
   formulaire se remplit sur GitHub (voir la section 5).
 - **Pas de recherche multi-fichiers**, ni de plusieurs onglets ouverts en même temps.
+- **En fenêtre très étroite, l'aperçu peut être rogné.** Repliez-le (icône « Affichage », à
+  droite de la barre d'outils) : la zone d'écriture reprend toute la place.
+- **Les fichiers du panneau « Mon travail » ne s'atteignent pas encore au clavier.** Le reste
+  de l'app, si.
 - **Pas d'explorateur de fichiers.** Polaris ouvre le `cours.adoc` de votre dossier et n'édite
   que celui-là. Les autres fichiers d'un cours — la configuration, les automatisations — sont
   techniques et ne se modifient pas ici.
