@@ -273,6 +273,35 @@ Après insertion, appuyez sur **Tab** pour passer d'un emplacement à remplir au
   `assets/images/` et lui donne le numéro suivant, de dix en dix (10, 20, 30…). Les valeurs
   intermédiaires restent libres pour insérer une image plus tard sans tout renuméroter.
 
+### Citer un ouvrage des Éditions ENI
+
+La slide « Ressources complémentaires » du préambule cite souvent un livre du catalogue des
+**Éditions ENI**. Polaris fait le travail mécanique à votre place, depuis la fenêtre
+**Infos du cours…** — c'est le moment où vous décrivez votre cours, donc celui où la question
+se pose.
+
+1. Sur `editions-eni.fr`, ouvrez la page du livre et **copiez son adresse**.
+2. Dans le bandeau du haut, cliquez sur **Infos du cours…** et descendez jusqu'à
+   **Ouvrage des Éditions ENI**.
+3. Collez l'adresse et cliquez sur **Lire la fiche**. La couverture, le titre, les auteurs et
+   l'ISBN s'affichent : vérifiez que c'est bien le bon livre.
+4. **Insérer l'ouvrage dans la slide** : la couverture est enregistrée dans les images du
+   cours, à la numérotation ENI, et la référence est écrite dans votre slide
+   « Ressources complémentaires ».
+
+Trois choses à savoir :
+
+- **Peu importe où est votre curseur.** Polaris retrouve la slide
+  « Ressources complémentaires » tout seul et écrit à la fin de celle-ci. Si votre cours n'en
+  a pas, la fenêtre vous le dit au lieu d'écrire n'importe où : ajoutez la slide dans le
+  préambule, puis revenez.
+- **Vous choisissez le livre, pas Polaris.** Il n'y a pas de recherche depuis l'application :
+  le site ne permet pas aux outils automatiques de l'interroger, et de toute façon choisir
+  l'ouvrage qui va avec votre cours est un jugement qui vous appartient.
+- **Un cours publié sur GitHub redistribue la couverture.** L'usage des visuels des Éditions
+  dans un support relève d'un accord interne : en cas de doute, demandez-le avant de publier.
+  La fenêtre vous le rappelle.
+
 ### Coller une capture d'écran
 
 Vous venez de faire une capture — **Impr. écran**, ou **Windows + Maj + S** — et elle est dans
