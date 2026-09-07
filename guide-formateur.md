@@ -348,6 +348,25 @@ Ce que l'aperçu vous montre en plus du texte :
 - **le contenu de support** (énoncés et corrigés de TP, déroulés de démo) regroupé en annexe,
   sur fond papier : ce qui ne partira **pas** au diaporama se distingue d'un coup d'œil.
 
+### Cliquez dans l'aperçu pour aller corriger
+
+*(depuis la version 0.15.0)*
+
+C'est le geste de la **relecture**. Vous lisez votre cours mis en page, vous repérez une faute
+de frappe, une phrase à reprendre — **cliquez dessus** : le curseur va se placer à cet endroit
+précis dans la zone d'écriture, prêt pour la correction.
+
+Passez la souris sur l'aperçu : un liseré bleu clair entoure **exactement ce que le clic va
+atteindre** — un paragraphe, une liste, un bloc de code, une image, un encadré de notes. Ce
+que vous voyez encadré est ce que vous obtiendrez.
+
+Deux précisions :
+
+- **L'aperçu ne bouge pas** quand vous cliquez : vous gardez sous les yeux ce que vous venez
+  de repérer.
+- **Sélectionner du texte reste possible** — un cliqué-glissé pour copier une phrase ne vous
+  envoie nulle part.
+
 > **L'aperçu s'affiche sans les couleurs ENI ?** C'est que le poste n'a pas de réseau : la
 > charte graphique est chargée en ligne. Vous pouvez continuer à écrire, le cours n'est pas
 > affecté.
@@ -386,6 +405,36 @@ cause. **F8** ouvre la liste et permet de passer d'un signalement au suivant.
 
 Les mots absents du dictionnaire sont soulignés **en bleu pointillé**, jamais en rouge.
 Survolez-les pour voir les corrections proposées, ou pour ajouter le mot à votre dictionnaire.
+
+### Prendre du recul : le diagnostic du cours
+
+Les compteurs regardent le détail, ligne par ligne. Le bouton **Diagnostic**, en bas à droite,
+regarde **le cours entier** : combien de modules, combien de slides, combien de TP et de
+démonstrations, quelles slides n'ont pas de notes orateur, quelles images n'ont pas de texte
+alternatif, et où se trouvent les longues séries de slides sans activité.
+
+**Il n'y a pas de note, pas de score sur 100**, et c'est délibéré : un chiffre unique donnerait
+l'illusion d'une mesure là où il n'y a qu'une somme de conventions, et il ne se discuterait
+pas. Chaque ligne du panneau est une **observation**, suivie de **la règle qui l'a produite** :
+vous pouvez juger qu'une règle ne s'applique pas à votre cours. Cliquez sur une observation
+pour aller voir de quoi elle parle ; recliquez pour passer à la suivante.
+
+### Le rythme du cours, d'un coup d'œil
+
+*(depuis la version 0.15.0)*
+
+Tout en bas du diagnostic, une frise montre **un module par ligne, une slide par point**, dans
+l'ordre de votre cours :
+
+- un **petit rond gris** pour une slide ordinaire,
+- un **rond violet** pour une démonstration,
+- un **carré vert** pour un TP.
+
+En une seconde, vous voyez comment votre cours respire : un module qui enchaîne trente slides
+sans jamais rien faire faire, un autre qui alterne. **Rien n'y est signalé** — l'espacement des
+activités est un choix pédagogique, pas une faute. C'est une vue, pas un contrôle.
+
+Le nom de chaque module est cliquable : il vous y emmène.
 
 ---
 
@@ -472,19 +521,32 @@ Après une publication réussie, le panneau vous dit **sur quelle version de tra
 cours est parti — par exemple « publié sur *eloise-menard* ». C'est l'information à
 transmettre à votre référent : elle suffit à retrouver votre travail.
 
-**La demande de relecture elle-même se fait sur GitHub, et Polaris ne la fait pas à votre
-place.** C'est un choix : remplir ce formulaire — titre, description, choix de la branche
-cible, relecteurs — est un travail technique, et un bouton qui prétendrait le régler d'un clic
-vous mettrait devant une page que rien ne vous a préparé à lire.
+**Depuis la version 0.15.0, la demande se fait dans Polaris** : le bouton orange
+**Demander la relecture…** apparaît sous ce message.
 
-- **Vous ne connaissez pas GitHub ?** Prévenez votre référent que votre travail est publié, en
-  lui donnant le nom de votre version de travail. Il s'occupe de la suite.
-- **Vous êtes à l'aise avec GitHub ?** Le panneau affiche l'**adresse de la page de demande**,
-  toute prête, avec un bouton **Copier** à droite. Collez-la dans votre navigateur : le
-  formulaire s'y ouvre déjà déplié, et votre demande n'existe qu'après avoir cliqué sur le
-  bouton vert **« Create pull request »**.
-  *(Si la copie échoue sur votre poste, Polaris vous le dit : cliquez alors sur l'adresse
-  elle-même, elle se sélectionne en entier, puis `Ctrl+C`.)*
+Il ouvre une fenêtre qui vous montre **ce qui va partir** — un titre, déjà rempli du nom de
+votre cours, et un espace pour dire en une phrase ce que vous avez fait. Vous corrigez, vous
+validez, c'est envoyé. Polaris vous rend le **numéro** de votre demande et son adresse.
+
+Trois choses à savoir :
+
+- **En validant, la demande part vraiment**, et elle devient visible par l'organisation. Il n'y
+  a pas d'annulation depuis Polaris. La fenêtre vous le dit avant que vous n'écriviez quoi que
+  ce soit.
+- **Vos publications suivantes s'ajoutent toutes seules** à la demande en cours. Vous n'avez
+  pas à en refaire une à chaque fois — et si vous cliquez quand même, Polaris vous répond que
+  la demande existe déjà, sans en créer une seconde.
+- **Vous ne choisissez pas le relecteur.** L'ingénierie pédagogique suit les demandes.
+
+Si le bouton ne s'affiche pas, c'est que Polaris n'a pas reconnu l'adresse GitHub de votre
+cours ; l'**adresse de la page de demande** reste affichée en dessous, avec un bouton
+**Copier**, pour la faire à la main.
+*(Si la copie échoue sur votre poste, Polaris vous le dit : cliquez alors sur l'adresse
+elle-même, elle se sélectionne en entier, puis `Ctrl+C`.)*
+
+Et si GitHub refuse — cela peut arriver si le compte enregistré sur votre poste n'a pas les
+droits nécessaires — Polaris affiche **quel compte** a été utilisé et **à qui** vous adresser.
+Ce n'est pas une perte : votre travail est publié de toute façon.
 
 ### Récupérer les modifications des autres
 
@@ -719,8 +781,8 @@ Autant le dire :
 - **Après une découpe, Polaris ne sait pas dire si les deux slides tiennent.** Le contrôle
   « slide trop chargée » ne s'applique qu'à votre cours enregistré, pas à une proposition
   affichée : il se recalcule une fois la proposition insérée.
-- **Polaris ne crée pas la demande de relecture.** Il vous donne l'adresse de la page ; le
-  formulaire se remplit sur GitHub (voir la section 5).
+- **Polaris ne vous dit pas où en est votre demande de relecture.** Il la crée (section 5),
+  mais pour savoir si elle a été lue, acceptée ou commentée, il faut ouvrir son adresse.
 - **Pas de recherche multi-fichiers**, ni de plusieurs onglets ouverts en même temps.
 - **En fenêtre très étroite, l'aperçu peut être rogné.** Repliez-le (icône « Affichage », à
   droite de la barre d'outils) : la zone d'écriture reprend toute la place.
