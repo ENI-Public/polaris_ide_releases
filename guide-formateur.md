@@ -48,10 +48,40 @@ sur **Afficher les cours de l'école** la première fois.
   de chacune.
 - Le champ de recherche trouve un cours par son code, son titre ou sa description. Les accents
   n'ont pas d'importance : « methodes » trouve « Méthodes ».
-- Cliquez sur un cours, indiquez où le ranger, puis **Télécharger le cours**.
+- **Chaque cours porte à droite ce que le clic va faire** : **Télécharger** si vous ne l'avez
+  pas encore sur ce poste, **Ouvrir** si vous l'avez déjà. Un seul clic, sur la ligne, et c'est
+  fait — Polaris ouvre le cours à la fin.
+
+Un téléchargement prend une dizaine de secondes : un cours transporte ses images. L'avancement
+s'affiche **sur la ligne** que vous venez de cliquer.
+
+**Où les cours sont rangés** est écrit au-dessus de la liste, avec un bouton **Changer…**. La
+première fois, Polaris vous demande l'emplacement au moment du téléchargement ; ensuite il s'en
+souvient, et vous n'avez plus rien à indiquer.
 
 Le **compte utilisé** est affiché au-dessus de la liste. Si celle-ci vous paraît courte, c'est
-la première chose à regarder — surtout si vous avez plusieurs comptes GitHub sur ce poste.
+la première chose à regarder — surtout si vous avez plusieurs comptes GitHub sur ce poste, et
+dans ce cas voyez juste en dessous.
+
+#### Si vous avez plusieurs comptes GitHub sur ce poste
+
+Cela arrive : un compte personnel et un compte ENI, par exemple. Polaris présente à GitHub
+**celui que votre poste lui donne**, et sans indication ce n'est pas forcément celui qui a accès
+aux cours — d'où une liste courte, ou un cours qui « n'existe pas » alors qu'il existe bien.
+
+Vous pouvez désormais choisir. **Réglages ⚙ → Compte GitHub** ouvre le panneau **Mon travail**,
+dont la première ligne indique le compte utilisé et propose **Changer…** :
+
+1. Tapez le nom du compte, ou choisissez-le s'il y figure déjà.
+2. **Vérifier** demande à GitHub qui répond pour ce compte, et vous affiche le nom réel. C'est la
+   seule façon d'en être sûr — si votre poste répond avec un autre compte, vous le voyez ici.
+3. **Utiliser ce compte** : Polaris s'en souvient et l'applique à tous les cours que vous
+   ouvrirez ensuite.
+
+> **Ce réglage ne touche que Polaris.** Vos autres usages de Git sur ce poste ne changent pas.
+> Et « Vérifier » peut faire apparaître la fenêtre de connexion de votre poste, si celui-ci n'a
+> encore rien d'enregistré pour ce compte : c'est normal, et Polaris n'enregistre aucun mot de
+> passe — seul le **nom** du compte est retenu.
 
 > **La liste est gardée sur votre poste.** Elle réapparaît aussitôt la fois suivante, avec sa
 > date. Le bouton **Actualiser** la remet à jour quand vous le voulez.
@@ -87,15 +117,16 @@ copié — l'onglet **Sur mon poste** ouvre son dossier directement.
 
 ### Coller un lien, si le cours n'est pas dans la liste
 
-Sous la liste, un champ attend un lien. Il sert pour un cours tout neuf, qui n'y figure pas
-encore, ou pour un lien qu'on vous a transmis.
+Sous la liste, dépliez **Un cours qui n'est pas dans la liste ?**. Un champ y attend un lien : il
+sert pour un cours tout neuf, qui n'apparaît pas encore, pour un dépôt qui ne suit pas encore la
+convention de nommage, ou pour un lien qu'on vous a transmis.
 
-Collez l'adresse de la page GitHub du cours, indiquez où le ranger, et **Télécharger le cours**.
-Comptez une dizaine de secondes : un cours transporte ses images. Polaris affiche l'avancement,
-puis **ouvre le cours tout seul** à la fin. Si le cours ne contient qu'un seul fichier `.adoc`,
-il est ouvert aussi : vous pouvez écrire immédiatement.
+Collez l'adresse de la page GitHub du cours, puis **Télécharger le cours**. Comptez une dizaine
+de secondes : un cours transporte ses images. Polaris affiche l'avancement, puis **ouvre le cours
+tout seul** à la fin. Si le cours ne contient qu'un seul fichier `.adoc`, il est ouvert aussi :
+vous pouvez écrire immédiatement.
 
-L'emplacement que vous avez choisi est retenu. Au cours suivant, il est déjà là.
+L'emplacement est le même que pour la liste, et il est retenu d'un cours à l'autre.
 
 > **N'importe quel lien de la page du cours fait l'affaire.** Si vous copiez la barre d'adresse
 > de votre navigateur en regardant un fichier ou une branche — une adresse du genre
@@ -120,7 +151,9 @@ privé. Le message **nomme le compte** qui vient d'être utilisé, et il y a tro
 plus fréquente à la plus rare :
 
 1. **Ce n'est pas le bon compte.** Si vous avez plusieurs comptes GitHub sur ce poste, vérifiez
-   que celui qui a été utilisé est bien celui qui a accès aux cours.
+   que celui qui a été utilisé est bien celui qui a accès aux cours — et changez-en si besoin,
+   par **Réglages ⚙ → Compte GitHub** (voir « Si vous avez plusieurs comptes GitHub sur ce
+   poste », plus haut). Le message vous rappelle où le faire.
 2. **Votre compte n'a pas encore accès à ce cours.** Demandez à l'ingénierie pédagogique de vous
    ajouter au dépôt.
 3. **Le lien ne désigne pas ce cours.** Vérifiez-le avec la personne qui vous l'a transmis.
@@ -514,6 +547,10 @@ ensuite ce qui s'est passé.
 
 Si le réseau tombe, **votre travail n'est pas perdu** : il est enregistré localement, et
 Polaris le dit clairement. Le bouton **↑ Envoyer** apparaît en bas pour réessayer plus tard.
+
+Si l'envoi est refusé, le message **nomme le compte GitHub** avec lequel Polaris s'est présenté.
+C'est utile quand vous avez plusieurs comptes sur ce poste : si ce n'est pas le bon, changez-en
+par **Réglages ⚙ → Compte GitHub** (section 1), puis réessayez avec **↑ Envoyer**.
 
 ### Et ensuite ? La relecture
 
