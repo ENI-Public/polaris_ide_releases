@@ -452,6 +452,9 @@ pas. Chaque ligne du panneau est une **observation**, suivie de **la règle qui 
 vous pouvez juger qu'une règle ne s'applique pas à votre cours. Cliquez sur une observation
 pour aller voir de quoi elle parle ; recliquez pour passer à la suivante.
 
+*(depuis la version 0.17.0)* Les boutons **Diagnostic** et **Images** se voient mieux, et ils
+**s'allument quand leur panneau est ouvert** — un second clic le referme.
+
 ### Le rythme du cours, d'un coup d'œil
 
 *(depuis la version 0.15.0)*
@@ -585,11 +588,48 @@ Et si GitHub refuse — cela peut arriver si le compte enregistré sur votre pos
 droits nécessaires — Polaris affiche **quel compte** a été utilisé et **à qui** vous adresser.
 Ce n'est pas une perte : votre travail est publié de toute façon.
 
-### Récupérer les modifications des autres
+### Quand une version plus récente vous attend
 
-Le bouton **↓ Récupérer**, en bas, rapatrie ce qui est arrivé pendant votre absence. Si votre
-version et la version commune ont divergé, Polaris refuse et vous le dit : ce genre
-d'arbitrage se fait à deux, pas tout seul dans un éditeur.
+*(nouveau en version 0.17.0)*
+
+Vous n'avez **rien à surveiller et aucun bouton à chercher**. Quand vous ouvrez un cours, puis
+régulièrement tant qu'il reste ouvert, Polaris va voir si une version plus récente a été
+déposée. S'il en trouve une, un bandeau apparaît **au-dessus de votre texte** :
+
+> Une version plus récente de ce cours a été déposée par Julien Trillard, il y a 2 heures.
+> Mets-toi à jour avant de commencer à écrire : la mise à jour ne t'enlèvera rien maintenant,
+> mais dès que tu auras modifié le cours, Polaris ne pourra plus le faire pour toi.
+
+Vous savez donc **qui** a déposé quelque chose et **quand** — le plus souvent, c'est vous-même
+depuis un autre poste.
+
+**Faites-le tout de suite si vous le pouvez.** Ce n'est pas une formule : tant que vous n'avez
+pas touché au cours, la mise à jour est gratuite et ne vous enlève rien. Dès que vous modifiez
+une ligne, Polaris ne peut plus la faire à votre place — il refuserait d'écraser votre travail.
+
+**« Plus tard »** ferme le bandeau. Un bouton **Mise à jour du cours** apparaît alors en bas à
+droite pour y revenir quand vous voulez, et le bandeau se represente tout seul si une nouvelle
+version arrive entre-temps.
+
+#### Si Polaris ne peut pas le faire à votre place
+
+Le bandeau le dit, et il n'affiche alors **aucun bouton** — il ne vous propose jamais une action
+qui échouerait :
+
+- **Vous avez des modifications en cours.** Les récupérer les écraserait. Mettez votre travail à
+  l'abri — copiez votre texte de côté — puis revenez. ⚠️ **Publier ne débloque rien** : votre
+  travail partirait en local, l'envoi serait refusé, et il faudrait ensuite réunir les deux
+  versions à la main.
+- **Les deux versions ont avancé chacune de leur côté.** Publiez votre travail pour le mettre à
+  l'abri, puis signalez-le à l'ingénierie pédagogique : ce genre d'arbitrage se fait à deux, pas
+  tout seul dans un éditeur.
+
+> **Une fenêtre de connexion peut s'ouvrir.** Cette vérification interroge GitHub, donc le
+> gestionnaire d'identifiants de votre poste. S'il ne trouve rien d'enregistré, il peut afficher
+> une fenêtre de connexion — même si vous n'avez rien demandé. Répondez-y, ou fermez-la :
+> Polaris **cesse alors de vérifier** jusqu'au prochain démarrage, il ne vous la reproposera pas
+> toutes les cinq minutes. L'infobulle du bouton **Mise à jour du cours** indique l'heure de la
+> dernière vérification et vous dit si elle est en pause.
 
 ---
 
