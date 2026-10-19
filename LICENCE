@@ -1,0 +1,66 @@
+LICENCE D'UTILISATION DE POLARIS IDE
+
+Copyright (c) 2026 ENI Ecole Informatique. Tous droits réservés.
+
+Polaris IDE (ci-après « le Logiciel ») est un logiciel propriétaire. Il est
+mis à disposition gratuitement, sous forme d'exécutables uniquement. Son code
+source n'est pas publié.
+
+1. Droit d'utilisation
+
+   ENI Ecole Informatique accorde à toute personne qui obtient le Logiciel
+   depuis ce dépôt un droit gratuit, non exclusif et non transférable de
+   l'installer et de l'utiliser, sur autant de postes qu'elle le souhaite.
+
+2. Ce qui n'est pas autorisé
+
+   Sauf accord écrit préalable d'ENI Ecole Informatique, il est interdit :
+   - de redistribuer le Logiciel, modifié ou non, gratuitement ou contre
+     rémunération, ailleurs que par ce dépôt ;
+   - de le vendre, le louer ou le proposer comme service à des tiers ;
+   - de le modifier ou d'en créer des œuvres dérivées ;
+   - de le décompiler ou de le désassembler, hors des cas où la loi
+     l'autorise expressément (article L122-6-1 du Code de la propriété
+     intellectuelle).
+
+   Partager le lien vers ce dépôt est libre.
+
+3. Contenus
+
+   Les cours et documents que vous éditez avec le Logiciel restent la
+   propriété de leurs auteurs ou ayants droit. La présente licence ne porte
+   que sur le Logiciel, pas sur les contenus qu'il permet d'éditer.
+
+4. Services tiers
+
+   Certaines fonctions s'appuient sur des services tiers soumis à leurs
+   propres conditions, que la présente licence ne modifie pas : GitHub pour
+   la récupération et la publication des cours, GitHub Copilot pour
+   l'assistance à la rédaction (téléchargé à son activation, il n'est pas
+   inclus dans les installateurs). Leur utilisation demande un compte et des
+   droits que le Logiciel ne fournit pas.
+
+5. Composants tiers
+
+   Le Logiciel inclut des composants open source distribués sous leur propre
+   licence, listés dans le fichier TIERS.md. La présente licence ne
+   restreint aucun des droits que ces licences vous accordent sur ces
+   composants.
+
+6. Absence de garantie
+
+   Le Logiciel est fourni « en l'état », sans garantie d'aucune sorte,
+   expresse ou implicite, notamment d'adéquation à un usage particulier ou
+   d'absence de défaut. Dans toute la mesure permise par la loi, ENI Ecole
+   Informatique ne pourra être tenue responsable d'aucun dommage résultant
+   de son utilisation ou de l'impossibilité de l'utiliser, y compris une
+   perte de données. Conservez une copie de votre travail.
+
+7. Résiliation
+
+   Ce droit d'utilisation prend fin automatiquement en cas de non-respect
+   de la présente licence.
+
+8. Droit applicable
+
+   La présente licence est régie par le droit français.
