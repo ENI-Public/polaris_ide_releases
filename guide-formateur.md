@@ -344,10 +344,12 @@ d'image s'ouvre directement avec votre capture. Vous n'avez pas à l'enregistrer
 Elle reçoit le prochain numéro ENI, comme n'importe quelle image, et le fichier est copié dans
 `assets/images/`.
 
-> **Pensez au texte alternatif.** Une capture n'a pas de nom de fichier dont Polaris pourrait
-> le déduire : le champ est donc vide, et c'est à vous de dire ce que montre l'image. C'est ce
-> texte que liront les apprenants qui ne voient pas l'écran, et celui qui s'affiche si l'image
-> se perd.
+> **Le texte alternatif est obligatoire** *(depuis la version 0.21.0)*. Une capture n'a pas de
+> nom de fichier dont Polaris pourrait le déduire : le champ est donc vide, et c'est à vous de
+> dire ce que montre l'image. C'est ce texte que liront les apprenants qui ne voient pas
+> l'écran, et celui qui s'affiche si l'image se perd. Si l'image n'apporte aucune information
+> — un motif, une illustration d'ambiance —, cochez **Image décorative** : les lecteurs d'écran
+> la passeront sous silence, et le diagnostic du cours ne vous la reprochera pas.
 
 Si vous collez à l'intérieur d'un bloc de code, Polaris refuse et vous le dit : une image n'a
 pas sa place dans un bloc de code, elle s'y afficherait en toutes lettres.
@@ -557,16 +559,28 @@ par **Réglages ⚙ → Compte GitHub** (section 1), puis réessayez avec **↑ 
 
 ### Et ensuite ? La relecture
 
-Après une publication réussie, le panneau vous dit **sur quelle version de travail** votre
-cours est parti — par exemple « publié sur *eloise-menard* ». C'est l'information à
-transmettre à votre référent : elle suffit à retrouver votre travail.
+*(changé en version 0.21.0)*
 
-**Depuis la version 0.15.0, la demande se fait dans Polaris** : le bouton orange
-**Demander la relecture…** apparaît sous ce message.
+Publier et demander la relecture sont **deux gestes différents**, et ils n'ont pas lieu au même
+moment.
 
-Il ouvre une fenêtre qui vous montre **ce qui va partir** — un titre, déjà rempli du nom de
-votre cours, et un espace pour dire en une phrase ce que vous avez fait. Vous corrigez, vous
-validez, c'est envoyé. Polaris vous rend le **numéro** de votre demande et son adresse.
+- **Publier**, vous le faites souvent : chaque publication met votre travail à l'abri sur
+  GitHub, dans **votre version de travail**. La version commune du cours, celle que tout le
+  monde utilise, ne change pas.
+- **Demander la relecture**, vous le faites **une seule fois**, quand vous avez fini la
+  rédaction ou la correction : vous proposez que votre version de travail rejoigne la version
+  commune. Une personne de l'ingénierie pédagogique la lit, peut vous poser des questions ou
+  vous demander des ajustements, puis l'accepte.
+
+Le bouton **✓ Demander la relecture…** est dans le bandeau, entre **Enregistrer** et les
+réglages. Il reste **grisé tant que rien n'est publié** — survolez-le, il vous dit pourquoi.
+
+Il ouvre une fenêtre qui explique tout cela, puis vous montre **ce qui va partir** : un titre,
+déjà rempli du nom de votre cours, et un espace pour dire en une phrase ce que vous avez fait.
+Pour envoyer, cochez **« J'ai fini la rédaction ou la correction et je demande la relecture de
+ce contenu »**. Si des modifications ne sont pas encore publiées, la fenêtre vous prévient : le
+relecteur ne les verrait pas. Polaris vous rend ensuite le **numéro** de votre demande et son
+adresse.
 
 Trois choses à savoir :
 
@@ -574,13 +588,12 @@ Trois choses à savoir :
   a pas d'annulation depuis Polaris. La fenêtre vous le dit avant que vous n'écriviez quoi que
   ce soit.
 - **Vos publications suivantes s'ajoutent toutes seules** à la demande en cours. Vous n'avez
-  pas à en refaire une à chaque fois — et si vous cliquez quand même, Polaris vous répond que
-  la demande existe déjà, sans en créer une seconde.
+  pas à en refaire une — et si vous cliquez quand même, Polaris vous répond que la demande
+  existe déjà, sans en créer une seconde.
 - **Vous ne choisissez pas le relecteur.** L'ingénierie pédagogique suit les demandes.
 
-Si le bouton ne s'affiche pas, c'est que Polaris n'a pas reconnu l'adresse GitHub de votre
-cours ; l'**adresse de la page de demande** reste affichée en dessous, avec un bouton
-**Copier**, pour la faire à la main.
+Si vous savez déjà ce qu'est une demande sur GitHub, l'**adresse de la page de demande** est
+dans la fenêtre, sous **Pour les habitués de GitHub**, avec un bouton **Copier**.
 *(Si la copie échoue sur votre poste, Polaris vous le dit : cliquez alors sur l'adresse
 elle-même, elle se sélectionne en entier, puis `Ctrl+C`.)*
 
@@ -734,7 +747,7 @@ ajouté **à la fin** de la slide. Rien n'est remplacé.
 Copilot travaille chez GitHub, pas sur votre poste : pour vous répondre, il faut lui envoyer
 du texte. Ce qui part **dépend du bouton**, et il vaut mieux le savoir avant d'activer.
 
-**Tant que Copilot n'est pas activé, rien ne part.** Aucun des trois boutons n'existe, et
+**Tant que Copilot n'est pas activé, rien ne part.** Aucun bouton Copilot n'existe, et
 l'éditeur ne parle à personne. C'est l'état par défaut d'un poste neuf.
 
 **Une fois Copilot activé, le cours ouvert est envoyé en entier**, dès son ouverture, puis au
@@ -755,6 +768,22 @@ modifications** — c'est-à-dire du contenu de cours, celui des passages que vo
 retouchés. Deux limites de construction : les images et les autres fichiers non textuels ne
 sont **jamais** envoyés, seulement cités par leur nom ; et le détail est plafonné, une grosse
 réorganisation n'expédie donc pas tout le cours.
+
+**« Proposer une correction » envoie la slide du passage cité, et l'action du contrôle.** Ce
+bouton, dans le panneau **MCO**, joint à sa consigne la slide où se trouve le passage relevé
+par le contrôle qualité — comme les demandes dirigées, une seule slide — et le texte de
+l'action à corriger. La correction s'affiche ligne à ligne (`+` ajouté, `−` retiré) et ne
+s'insère que si vous cliquez sur **Insérer** ; un seul **Ctrl+Z** la retire.
+
+**« Faire rédiger par Copilot » envoie vos décisions et ce que vous avez changé.** Ce bouton,
+dans la fenêtre **Demander la relecture**, rédige le compte rendu publié sur le contrôle
+qualité. Il joint à sa consigne les actions du contrôle avec ce que vous en avez décidé —
+**y compris les raisons que vous avez écrites** pour celles que vous ne retenez pas —, vos
+messages de publication et le **détail des modifications** depuis la version commune du
+cours, avec les mêmes limites que « Proposer un message ». Copilot reformule vos raisons, il
+ne les invente pas : tant qu'une action non retenue n'a pas de raison, le bouton reste grisé.
+La proposition arrive à côté du champ, et rien ne part avant que vous ayez cliqué sur
+**Utiliser ce texte**, puis envoyé la demande.
 
 > **Vous préférez ne rien envoyer du tout ?** Laissez Copilot désactivé, ou désactivez-le
 > depuis **Réglages → Autocomplétion Copilot…**. Tout le reste de Polaris — l'aperçu, le
