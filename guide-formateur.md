@@ -2,7 +2,8 @@
 
 Ce guide suit l'ordre dans lequel vous allez rencontrer les choses : ouvrir un cours,
 l'écrire, vérifier, publier. Vous n'avez pas besoin de le lire en entier avant de commencer —
-les deux premières sections suffisent pour travailler.
+**« Avant de commencer »** est indispensable, puis les deux premières sections suffisent pour
+travailler.
 
 > **Vous n'avez pas besoin de connaître Git.** Polaris parle de « ton travail », de
 > « télécharger un cours » et de « publier ». Les mots de Git sont là, dans les infobulles,
@@ -10,6 +11,7 @@ les deux premières sections suffisent pour travailler.
 
 **Sommaire**
 
+0. [Avant de commencer : GitHub et Git sur votre poste](#0-avant-de-commencer--github-et-git-sur-votre-poste)
 1. [Ouvrir un cours](#1-ouvrir-un-cours)
 2. [Écrire son cours](#2-écrire-son-cours)
 3. [Voir ce que verront les apprenants](#3-voir-ce-que-verront-les-apprenants)
@@ -20,6 +22,70 @@ les deux premières sections suffisent pour travailler.
 8. [Tout se fait au clavier](#8-tout-se-fait-au-clavier)
 9. [Quand ça coince](#9-quand-ça-coince)
 10. [Ce que Polaris ne sait pas encore faire](#10-ce-que-polaris-ne-sait-pas-encore-faire)
+
+---
+
+## 0. Avant de commencer : GitHub et Git sur votre poste
+
+Les cours de l'école sont rangés sur **GitHub**. Polaris va les y chercher, et y publie votre
+travail. Pour cela, il lui faut **deux choses** sur votre poste. Elles ne se font qu'une fois,
+mais **sans elles, Polaris ne peut ni lister les cours de l'école, ni en télécharger un, ni
+publier** : vous pourriez seulement écrire dans un cours déjà présent sur votre disque.
+
+### 1. Un compte GitHub qui a accès aux cours
+
+- Si vous n'avez pas de compte, créez-le sur [github.com](https://github.com/signup).
+- **Demandez à l'ingénierie pédagogique de vous donner accès aux cours** que vous allez
+  rédiger, en lui indiquant le **nom exact** de votre compte. Tant que ce n'est pas fait, la
+  liste « Cours de l'école » reste vide ou incomplète, et un cours vous est annoncé comme
+  « inexistant » alors qu'il existe bien : GitHub ne montre pas un dépôt privé à qui n'y a pas
+  accès.
+- Vous avez déjà un compte personnel ? Vous pouvez vous en servir, ou en avoir un second : voir
+  « Si vous avez plusieurs comptes GitHub sur ce poste », section 1.
+
+### 2. Git, avec son gestionnaire d'identifiants
+
+Polaris **ne vous demande jamais votre mot de passe GitHub** et n'en garde aucun. Il demande à
+votre poste de prouver qui vous êtes, grâce au **gestionnaire d'identifiants** livré avec Git.
+C'est lui qui retient votre connexion à GitHub, une fois pour toutes.
+
+**Sous Windows : installez Git pour Windows.**
+
+1. Téléchargez-le sur [git-scm.com](https://git-scm.com/download/win) et lancez l'installation.
+   Si votre poste est géré par le service informatique, demandez-lui de l'installer.
+2. **Gardez les choix proposés par défaut**, en particulier **Git Credential Manager** sur
+   l'écran qui demande quel gestionnaire d'identifiants utiliser. C'est lui que Polaris utilise :
+   si vous le décochez, Polaris ne pourra pas se connecter à GitHub.
+3. Redémarrez Polaris s'il était ouvert pendant l'installation.
+
+**Sous macOS** : Git est fourni par Apple, avec un gestionnaire d'identifiants qui range votre
+connexion dans le trousseau. Ouvrez le Terminal et tapez `git --version` : si macOS propose
+d'installer les « outils de ligne de commande », acceptez.
+
+**Sous Linux** : installez Git avec le gestionnaire de paquets de votre distribution. ⚠️ **Git
+n'y retient pas vos identifiants par défaut** : il faut lui ajouter un gestionnaire
+d'identifiants, par exemple [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager).
+Sans lui, Polaris ne pourra pas se connecter à GitHub. Demandez à votre référent si vous ne
+savez pas le faire.
+
+### 3. Se connecter à GitHub, une première fois
+
+Il reste à enregistrer votre connexion sur le poste. Le plus sûr est de le faire une fois en
+téléchargeant un cours en ligne de commande :
+
+1. Ouvrez un terminal : sous Windows, tapez **PowerShell** dans le menu Démarrer.
+2. Tapez `git clone`, une espace, puis collez l'adresse de la page GitHub d'un cours auquel vous
+   avez accès, et appuyez sur **Entrée**.
+3. **Une fenêtre de connexion à GitHub s'ouvre** : choisissez de vous connecter **avec votre
+   navigateur**, connectez-vous avec le compte qui a accès aux cours, et autorisez la demande.
+4. Le cours se télécharge. **C'est terminé** : votre connexion est retenue, et Polaris la
+   réutilisera pour tout le reste. Vous pouvez ouvrir ce cours dans Polaris par l'onglet **Sur
+   mon poste**, ou le supprimer et le reprendre depuis **Cours de l'école**.
+
+> **Pour vérifier que tout est en place** : dans Polaris, **Réglages ⚙ → Compte GitHub**,
+> **Choisir…** (ou **Changer…**), tapez le nom de votre compte, puis **Vérifier**. Polaris
+> affiche le compte qui répond réellement pour votre poste. Si c'est le bon, vous êtes prêt :
+> cliquez sur **Utiliser ce compte**.
 
 ---
 
@@ -90,8 +156,8 @@ dont la première ligne indique le compte utilisé et propose **Changer…** :
 
 Pour savoir à quels cours vous avez accès, Polaris a besoin de s'identifier auprès de GitHub. Il
 utilise pour cela les **identifiants déjà enregistrés sur votre poste** — exactement les mêmes
-que ceux qui servent à récupérer un cours et à publier votre travail. Vous n'avez rien de plus à
-saisir, ni à configurer.
+que ceux qui servent à récupérer un cours et à publier votre travail. Une fois la section 0 faite,
+vous n'avez rien de plus à saisir, ni à configurer.
 
 - **Polaris ne conserve aucun mot de passe ni aucun jeton d'accès.** Il les demande à Windows au
   moment de la demande, s'en sert, et les oublie. Ce qui est gardé sur votre poste, c'est
@@ -141,9 +207,10 @@ L'emplacement est le même que pour la liste, et il est retenu d'un cours à l'a
 
 Le message vous dit laquelle des situations vous concerne.
 
-**« Ton poste n'a pas encore d'identifiants GitHub enregistrés. »** Une première récupération en
-ligne de commande (`git clone`) suffit à les enregistrer ; Polaris les réutilisera ensuite.
-Demandez à votre référent si vous ne savez pas comment faire.
+**« Ton poste n'a pas encore d'identifiants GitHub enregistrés. »** Votre poste n'est pas encore
+connecté à GitHub, ou Git n'y est pas installé avec son gestionnaire d'identifiants. Reprenez la
+section 0, « Avant de commencer » : installer Git, puis une première récupération en ligne de
+commande (`git clone`) suffit à enregistrer votre connexion ; Polaris la réutilisera ensuite.
 
 **« Pour ce compte-là, ce cours n'existe pas. »** GitHub répond la même chose qu'un cours soit
 absent ou simplement invisible pour le compte utilisé : il ne révèle pas l'existence d'un dépôt
@@ -155,7 +222,7 @@ plus fréquente à la plus rare :
    par **Réglages ⚙ → Compte GitHub** (voir « Si vous avez plusieurs comptes GitHub sur ce
    poste », plus haut). Le message vous rappelle où le faire.
 2. **Votre compte n'a pas encore accès à ce cours.** Demandez à l'ingénierie pédagogique de vous
-   ajouter au dépôt.
+   ajouter au dépôt, en lui donnant le nom du compte affiché dans le message.
 3. **Le lien ne désigne pas ce cours.** Vérifiez-le avec la personne qui vous l'a transmis.
 
 ### Les informations du cours
@@ -272,8 +339,10 @@ formalisme de l'école :
 | `eni-slide` | une slide standard |
 | `eni-tp` | un travail pratique, avec énoncé et corrigé |
 | `eni-demo` | une démonstration, avec son déroulé |
-| `eni-code` | un bloc de code coloré |
+| `eni-colonnes` | une slide standard en deux colonnes |
+| `eni-code` | un bloc de code coloré — voir [Langages](langages/README.md) |
 | `eni-literal` | du texte affiché tel quel (sortie de console, arborescence) |
+| `eni-mermaid` | un diagramme dessiné à partir de texte — voir [Mermaid](langages/mermaid.md) |
 | `eni-img` | une image |
 | `eni-notes` | des notes orateur |
 | `eni-step` | une liste à révélation progressive |
@@ -353,6 +422,62 @@ Elle reçoit le prochain numéro ENI, comme n'importe quelle image, et le fichie
 
 Si vous collez à l'intérieur d'un bloc de code, Polaris refuse et vous le dit : une image n'a
 pas sa place dans un bloc de code, elle s'y afficherait en toutes lettres.
+
+### Du code, du pseudo-code, des diagrammes
+
+Chaque langage a sa page dans le dossier **[Langages](langages/README.md)** : comment
+l'écrire, ce qui est reconnu, ce que deviendra votre bloc dans les slides et les PDF. Ce guide
+n'en garde que l'essentiel.
+
+- **Du code** s'écrit `[source,python]` (ou `bash`, `java`…), puis le code entre deux lignes
+  `----` : template `eni-code`. Écrivez le nom complet du langage — `javascript`, pas `js` —,
+  sinon le bloc sort sans coloration ; Polaris vous le signale en jaune.
+  → [La liste des langages colorés](langages/README.md#les-langages-colorés)
+- **Du pseudo-code** d'algorithmique s'écrit `[source,pseudo]`, coloré aux couleurs de
+  l'école dans l'aperçu, les slides et les PDF.
+  → [Pseudo-code ENI](langages/pseudo-code.md)
+- **Un diagramme** s'écrit en texte avec Mermaid, et il est dessiné. Voir ci-dessous.
+  → [Mermaid](langages/mermaid.md)
+
+### Dessiner un diagramme
+
+*(depuis la version 0.22.0)*
+
+Un schéma — étapes d'un processus, échanges entre un navigateur et un serveur, branches
+Git, répartition en camembert… — peut s'écrire en texte, avec la syntaxe **Mermaid**, au lieu
+d'être dessiné dans un autre logiciel puis collé. Le template **Diagramme Mermaid** (menu
+**Templates ENI**, ou tapez `eni-mermaid`) pose la forme attendue :
+
+```
+.Chaîne de valeur des Jardins de Garance
+[mermaid, target=chaine-de-valeur, alt="Chaîne de valeur en trois étapes : production, préparation des paniers, vente."]
+----
+flowchart LR
+  P[Production] --> C[Préparation des paniers] --> V[Vente]
+----
+```
+
+L'aperçu dessine le diagramme comme il apparaîtra dans les slides et les PDF, aux couleurs de
+l'école.
+
+> **Deux obligations, sans quoi le cours n'est pas publié du tout** — ni les slides, ni les
+> PDF : la dernière version reste en ligne.
+> - **`alt="…"`, le texte alternatif** : ce que le diagramme apprend à qui ne le voit pas. Si
+>   le schéma porte beaucoup d'information, décrivez-le aussi dans un paragraphe ou une liste
+>   juste à côté : c'est la seule description qui atteint les PDF.
+> - **`target=…`, un nom propre à chaque diagramme** du cours.
+>
+> Polaris souligne en **rouge** un diagramme auquel il manque l'un ou l'autre. Un diagramme mal
+> écrit, lui, est remplacé dans l'aperçu par un **encadré rouge** qui cite l'erreur.
+
+> **Mettez en forme un libellé entier, ou pas du tout.** Un seul mot en gras dans une étiquette
+> (`` "`**Gras** et normal`" ``) superposerait les mots dans les PDF : la publication le refuse.
+
+Pour **montrer le code** d'un diagramme — dans un TP où les apprenants doivent le saisir —,
+écrivez `[source,mermaid]` : le code est alors affiché tel quel, sans être dessiné.
+
+Les types de diagrammes disponibles, ceux qui passent mal sur papier, et quelques conseils
+d'écriture sont dans la page [Mermaid](langages/mermaid.md).
 
 ### Se repérer dans un long cours
 
@@ -839,10 +964,16 @@ Le bloc est décalé d'une espace : en AsciiDoc, une ligne qui commence par une 
 un délimiteur, c'est du texte. Le contrôle du document le signale en jaune — collez le
 délimiteur contre la marge, sans espace devant.
 
-**Publier échoue en parlant d'identifiants.**
-Votre poste n'a pas d'identifiants GitHub enregistrés. Faites un `git push` une fois en ligne
-de commande sur ce dépôt : le gestionnaire d'identifiants les retiendra, et Polaris les
-réutilisera.
+**Publier, télécharger un cours ou afficher les cours de l'école échoue en parlant
+d'identifiants.**
+Votre poste n'est pas connecté à GitHub : Git n'est pas installé, son gestionnaire
+d'identifiants a été décoché à l'installation, ou la première connexion n'a pas été faite.
+Reprenez la section 0, « Avant de commencer ».
+
+**La liste « Cours de l'école » est vide, ou un cours « n'existe pas ».**
+Votre compte GitHub n'a pas encore accès aux cours, ou ce n'est pas le bon compte qui se
+présente. **Réglages ⚙ → Compte GitHub → Vérifier** vous dit lequel est utilisé ; donnez son
+nom à l'ingénierie pédagogique pour qu'elle vous ouvre l'accès.
 
 **Polaris refuse de publier sur la version commune.**
 C'est voulu. Le panneau vous propose de créer votre version de travail : acceptez, votre

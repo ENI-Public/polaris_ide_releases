@@ -15,7 +15,7 @@ publiez sur GitHub sans jamais toucher à Git.
 
 ### [⬇️ Télécharger la dernière version](../../releases/latest)
 
-[Installer](#-installer) · [Guide du formateur](guide-formateur.md) · [Mises à jour](#-les-mises-à-jour) · [Un problème ?](#-un-problème-)
+[Installer](#-installer) · [Guide du formateur](guide-formateur.md) · [Langages](langages/README.md) · [Mises à jour](#-les-mises-à-jour) · [Un problème ?](#-un-problème-)
 
 </div>
 
@@ -45,9 +45,9 @@ peut sans risque.
 <td valign="top">
 
 ### 🚀 Publier sans connaître Git
-Un seul bouton : **Publier mon travail**. Polaris enregistre, envoie et vous propose de
-demander la relecture, en français et sans quitter l'application. Récupérer un cours de
-l'école se fait aussi en un clic.
+Un seul bouton : **Publier mon travail**. Polaris enregistre et envoie, en français et sans
+quitter l'application ; la relecture se demande d'un autre bouton, quand vous avez fini.
+Récupérer un cours de l'école se fait aussi en un clic.
 
 </td>
 <td valign="top">
@@ -90,6 +90,23 @@ entre théorie, démonstrations et travaux pratiques.
 ### ♿ Pensé pour le confort de chacun
 Taille du texte, interligne, espacement des lettres et des mots, taille de l'interface, correcteur orthographique
 **local**, souligné en bleu et jamais en rouge. Tout se fait aussi **au clavier**.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### 📐 Des diagrammes écrits en texte
+Organigrammes, séquences, classes, Gantt… s'écrivent avec **Mermaid** et sont dessinés aux
+couleurs de l'école, dans l'aperçu, les slides et les PDF. Le **pseudo-code** d'algorithmique
+a sa propre coloration. ➡️ [Les langages](langages/README.md)
+
+</td>
+<td valign="top">
+
+### 🛠️ Les retours sur votre cours, dans Polaris
+Le panneau **MCO** découpe le contrôle qualité de votre cours en actions : **aller au
+passage** cité, marquer ce qui est traité, et clore le contrôle en demandant la relecture.
 
 </td>
 </tr>
@@ -166,9 +183,15 @@ chmod +x Polaris.IDE_x.y.z_amd64.AppImage
 - 🌐 **Une connexion internet.** L'aperçu charge la charte graphique ENI en ligne. Sans
   réseau, vous pouvez écrire, mais l'aperçu s'affiche sans les couleurs ni la mise en page
   ENI.
-- 🔑 **Git pour Windows, si vous publiez votre travail.** Polaris embarque tout ce qu'il faut
-  pour fonctionner, mais il réutilise le gestionnaire d'identifiants installé avec Git pour
-  se connecter à GitHub.
+- 👤 **Un compte GitHub qui a accès aux cours.** L'ingénierie pédagogique vous ouvre l'accès
+  aux dépôts des cours que vous rédigez : donnez-lui le nom de votre compte.
+- 🔑 **Git, avec son gestionnaire d'identifiants — indispensable.** Sous Windows, installez
+  [Git pour Windows](https://git-scm.com/download/win) en gardant **Git Credential Manager**,
+  proposé par défaut. Polaris s'en sert pour se connecter à GitHub : **sans lui, il ne peut ni
+  lister les cours de l'école, ni en télécharger un, ni publier.** Sous macOS, le Git fourni
+  par Apple suffit ; sous Linux, il faut lui ajouter un gestionnaire d'identifiants.
+  ➡️ La marche à suivre, première connexion comprise, est au début du
+  [guide du formateur](guide-formateur.md#0-avant-de-commencer--github-et-git-sur-votre-poste).
 - 🪟 **Windows 11 de préférence.** Polaris a besoin de WebView2, présent d'origine sur
   Windows 11.
 

@@ -11,6 +11,8 @@ Polaris ne restreint pas. Leur texte complet est disponible à l'adresse indiqu�
 | Asciidoctor.js | MIT | https://github.com/asciidoctor/asciidoctor.js |
 | CodeMirror 6 | MIT | https://codemirror.net |
 | highlight.js | BSD-3-Clause | https://github.com/highlightjs/highlight.js |
+| Mermaid | MIT | https://github.com/mermaid-js/mermaid |
+| Dépendances de Mermaid : D3 (ISC), dagre-d3-es, Cytoscape.js, KaTeX, marked, Rough.js (MIT), DOMPurify | MIT, ISC ; DOMPurify : MPL-2.0 ou Apache-2.0 | https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/package.json |
 | React, React DOM | MIT | https://github.com/facebook/react |
 | Zustand | MIT | https://github.com/pmndrs/zustand |
 | nspell | MIT | https://github.com/wooorm/nspell |
