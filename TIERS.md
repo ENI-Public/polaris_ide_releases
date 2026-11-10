@@ -31,10 +31,10 @@ source, sous licence MPL-2.0, est disponible aux adresses ci-dessus.
 
 | Composant | Licence | Source |
 |---|---|---|
-| Tauri et ses plugins officiels (fs, dialog, updater, process, opener) | MIT ou Apache-2.0 | https://github.com/tauri-apps/tauri |
+| Tauri et ses plugins officiels (fs, dialog, updater, process, opener, log) | MIT ou Apache-2.0 | https://github.com/tauri-apps/tauri |
 | libgit2, via `git2` | GPLv2 avec exception de liaison | https://github.com/libgit2/libgit2 |
 | OpenSSL (version macOS uniquement) | Apache-2.0 | https://www.openssl.org |
-| reqwest, rustls, tokio, serde, flate2, tar, sha2 | MIT ou Apache-2.0 | https://crates.io |
+| reqwest, rustls, tokio, serde, flate2, tar, sha2, log | MIT ou Apache-2.0 | https://crates.io |
 
 ## Non inclus
 

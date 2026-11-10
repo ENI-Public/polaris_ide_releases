@@ -479,6 +479,36 @@ Pour **montrer le code** d'un diagramme — dans un TP où les apprenants doiven
 Les types de diagrammes disponibles, ceux qui passent mal sur papier, et quelques conseils
 d'écriture sont dans la page [Mermaid](langages/mermaid.md).
 
+### Animer une explication : le Studio d'animation
+
+*(depuis la version 0.23.0)*
+
+Certains mécanismes se comprennent mieux en mouvement : un paquet qui traverse les couches
+réseau, une fenêtre glissante qui avance sur un flux, un composant qui s'insère sur une carte
+mère. Le bouton **Animation…** (groupe **Insérer** du ruban, ou `Ctrl+K`) ouvre le **Studio
+d'animation**, dans une fenêtre à part.
+
+1. **Nouvelle animation** : donnez-lui un nom — minuscules, chiffres et tirets, il devient le
+   nom de ses fichiers — et choisissez sa nature : **2D**, un schéma animé volontairement sobre,
+   ou **3D**, des objets réalistes que l'on peut faire tourner à la souris.
+2. **Décrivez ce que vous voulez montrer** dans « Ta demande », puis **Proposer une
+   animation**. Copilot l'écrit, le moteur la vérifie, et elle se joue dans le Studio, étape
+   par étape. Une animation 3D détaillée peut demander plusieurs minutes.
+3. **Retouchez-la** en une phrase (« ralentis l'étape 2, ajoute une flèche de retour »). Cochez
+   **Vérifie le rendu** pour que Copilot regarde le résultat et corrige ce qui ne va pas.
+4. **Garder la proposition**, puis **Insérer dans le cours** : les fichiers sont écrits dans
+   `assets/animations/`, et une ligne `anim::nom[]` est posée au curseur.
+
+Pour modifier une animation existante, placez le curseur sur sa ligne `anim::` et cliquez de
+nouveau sur **Animation…**.
+
+Dans les slides, chaque étape est un **fragment** : vous avancez à votre rythme, comme dans une
+liste progressive. Dans les PDF, chaque étape devient une **image fixe** de son état final. Le
+texte alternatif de l'animation est écrit avec elle, dans sa chronologie.
+
+> **Sans Copilot, le Studio s'ouvre mais ne génère rien** : activez-le dans **Réglages →
+> Autocomplétion Copilot…**, depuis la fenêtre principale.
+
 ### Se repérer dans un long cours
 
 - **Le plan du cours**, dans le panneau de gauche, liste vos modules et vos slides. Cliquez
@@ -681,6 +711,34 @@ Polaris le dit clairement. Le bouton **↑ Envoyer** apparaît en bas pour rées
 Si l'envoi est refusé, le message **nomme le compte GitHub** avec lequel Polaris s'est présenté.
 C'est utile quand vous avez plusieurs comptes sur ce poste : si ce n'est pas le bon, changez-en
 par **Réglages ⚙ → Compte GitHub** (section 1), puis réessayez avec **↑ Envoyer**.
+
+### Les retours sur votre cours : le panneau MCO
+
+*(depuis la version 0.21.0, signalements et tâches depuis la version 0.23.0)*
+
+Le bouton **MCO**, dans la barre du bas, ouvre en bas de l'écran les retours sur votre cours.
+Le plan, l'éditeur et l'aperçu restent visibles.
+
+- **Le contrôle qualité mensuel**, découpé en actions et rangé par priorité.
+- **Les signalements et les tâches**, écrits par les formateurs et l'équipe avec les
+  formulaires de GitHub, rangés par urgence. Un signalement donne une action ; une tâche, une
+  action par case à cocher.
+- **Les autres retours** (les propositions d'amélioration, par exemple), affichés tels quels :
+  ce sont des décisions à prendre, pas des corrections.
+
+Pour chaque action, **Aller au passage** vous emmène à la ligne citée, et **Proposer une
+correction** demande à Copilot une correction de la slide, que vous relisez avant de
+l'insérer. Vous indiquez ensuite **Traitée** ou **Non retenue**, avec votre raison : c'est
+retenu sur votre poste, rien ne part sur GitHub depuis ce panneau.
+
+Ce qui se passe ensuite :
+
+- **À votre prochaine publication**, les actions traitées sont cochées dans le contrôle qualité
+  et dans les tâches, une fois votre travail envoyé.
+- **En demandant la relecture**, vous pouvez clore le contrôle, ainsi que les signalements et
+  les tâches dont chaque action a une décision. Un compte rendu de ce que vous avez corrigé, et
+  de ce que vous n'avez pas retenu, est publié sur chacun. Ils sont clos quand la relecture est
+  acceptée.
 
 ### Et ensuite ? La relecture
 
@@ -910,6 +968,12 @@ ne les invente pas : tant qu'une action non retenue n'a pas de raison, le bouton
 La proposition arrive à côté du champ, et rien ne part avant que vous ayez cliqué sur
 **Utiliser ce texte**, puis envoyé la demande.
 
+**Le Studio d'animation envoie votre demande et l'animation en cours, jamais le cours.** Il
+joint à sa consigne ce que vous décrivez, le code de l'animation que vous modifiez et, si vous
+cochez **Vérifie le rendu**, une image de l'état final de chaque étape. Ces demandes sont plus
+longues que les autres, et consomment davantage : comptez quelques interactions premium par
+animation.
+
 > **Vous préférez ne rien envoyer du tout ?** Laissez Copilot désactivé, ou désactivez-le
 > depuis **Réglages → Autocomplétion Copilot…**. Tout le reste de Polaris — l'aperçu, le
 > correcteur, le contrôle du formalisme, Git — fonctionne à l'identique et reste sur votre
@@ -1006,6 +1070,17 @@ Deux choses à savoir :
   de TP. Décrire le problème suffit ; si une slide précise est en cause, dites son titre.
 
 Si votre navigateur ne s'ouvre pas, Polaris affiche l'adresse et un bouton pour la copier.
+
+**Le journal des erreurs.** Polaris note sur votre poste, dans un fichier, les erreurs qu'il
+rencontre — y compris celles qu'il vous a affichées puis que vous avez refermées. Ce fichier
+**ne quitte jamais votre poste tout seul**. La fenêtre « Signaler un problème » vous montre les
+dernières erreurs en clair, et vous propose deux choses :
+
+- **les joindre au signalement**, en cochant une case (décochée au départ). Relisez-les avant :
+  elles peuvent citer votre compte GitHub ou le nom d'un cours, et le signalement est public.
+  Votre dossier personnel, lui, est masqué ;
+- **copier le journal complet**, pour l'envoyer en privé à votre référent plutôt que dans un
+  signalement public.
 
 ---
 
